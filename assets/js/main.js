@@ -13,6 +13,17 @@ const clickListAddClass = (target, classNm) => {
     })
 }
 
+// 가장 가까운 부모 찾는 함수
+function findClosestParent(element, className) {
+    while (element) {
+        if (element.classList.contains(className)) {
+            return element;
+        }
+        element = element.parentElement;
+    }
+    return null;
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
     const menuList = document.querySelectorAll('.menuList > li:has(ul) > a');
     const menuLink = document.querySelectorAll('.menuList li:not(:has(> ul))');
@@ -40,4 +51,13 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const tabsNavSm = document.querySelectorAll('.tabsNavSm > li');
     if (tabsNavSm) clickListAddClass(tabsNavSm, 'isCurrent');
+
+    document.querySelector('.tbl-list').addEventListener('click', function(event) {
+        if (event.target.matches('.accordion_wrap .btn.sm')) {
+            const accordionWrap = findClosestParent(event.target, 'accordion_wrap');
+            if (accordionWrap) {
+                accordionWrap.classList.toggle('on');
+            }
+        }
+    });
 })

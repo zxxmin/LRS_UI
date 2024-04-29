@@ -23,13 +23,13 @@
         background-color: rgba($white, 0.3);
         backdrop-filter: blur(.2rem);
         border-radius: $radiusSm;
+        padding: $gapSm $gap;
         position: relative;
     }
 }
 
 .tabsNav {
     li {
-        padding: $gapSm $gap;
         @include type('TabM');
 
         > div {
@@ -108,7 +108,6 @@
 
 .tabsNavSm {
     li {
-        padding: $gap;
         > div {
             text-align: center;
             > p {
