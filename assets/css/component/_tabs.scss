@@ -12,16 +12,24 @@
     }
 }
 
-.tabsNav {
+.tabsNav,
+.tabsNavSm {
     gap: 2rem;
+    margin-bottom: $gap;
     li {
         flex: 1;
         min-width: 0;
         width: calc(100% / 4);
         background-color: rgba($white, 0.3);
+        backdrop-filter: blur(.2rem);
         border-radius: $radiusSm;
-        padding: $gapSm $gap;
         position: relative;
+    }
+}
+
+.tabsNav {
+    li {
+        padding: $gapSm $gap;
         @include type('TabM');
 
         > div {
@@ -92,6 +100,43 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.tabsNavSm {
+    li {
+        padding: $gap;
+        > div {
+            text-align: center;
+            > p {
+                @include type('TabL');
+            }
+            > span {
+                display: block;
+                padding-top: $gap;
+                margin-top: $gap;
+                font-size: $fontSizeXlg;
+                font-weight: 500;
+                color: $blueD;
+                border-top: 1px solid transparent;
+                border-image: linear-gradient(to right, rgba($white, 0) 0%, $white 50%, rgba($white, 0) 100%);
+                border-image-slice: 1;
+            }
+        }
+
+        &.isCurrent {
+            background-color: $white;
+            > div {
+                > p {
+                    color: $blue0;
+                }
+                > span {
+                    color: $black;
+                    border-image: linear-gradient(to right, rgba($blue0, 0) 0%, $blue0 50%, rgba($blue0, 0) 100%);
+                    border-image-slice: 1;
                 }
             }
         }
