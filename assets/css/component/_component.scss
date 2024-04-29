@@ -212,3 +212,18 @@
         }
     }
 }
+
+.sectionTit {
+    display: flex;
+    flex-direction: column;
+    gap: $gapXsm;
+    font-size: $fontSize;
+    font-weight: 400;
+    color: $white;
+    margin-bottom: $gap;
+    > span {
+        font-size: $fontSizeLg;
+        font-weight: 700;
+        display: block;
+    }
+}

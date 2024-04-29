@@ -6,10 +6,12 @@
     <title>SMLIE LRS</title>
 
     <link rel="stylesheet" href="../../../assets/css/style.css">
-    <script src="../../../assets/js/main.js"></script>
-
     <link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <!-- <script src="../../../assets/js/_layout.js"></script> -->
+    <script src="../../../assets/js/main.js" defer></script>
 </head>
 <body>
     <div class="accessibility">
@@ -30,13 +32,13 @@
                     </ul>
                 </li>
                 <li class="gnb-xapi"><a href="#none">xAPIData</a></li>
-                <li class="gnb-edit">
+                <!-- <li class="gnb-edit">
                     <a href="#none">EDIT</a>
                     <ul>
                         <li class="ico-manager"><a href="#none">관리자 관리</a></li>
                         <li class="ico-sitemng"><a href="#none">사이트 관리</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <div>
@@ -62,7 +64,86 @@
 
         <div class="CONTENT">
             <section>
-                <h1>Pages / Dashboard</h1>
+                <h1 class="sectionTit">
+                    Pages / Dashboard
+                    <span>학습활동 - LXP</span>
+                </h1>
+
+                <ul class="tabsNav">
+                    <li class="isCurrent">
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-lxp">
+                                <span>교과/과목</span>
+                                <p>LXP</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 LXP</span>
+                                    <em class="fontColorGreen">85,256</em>
+                                </div>
+                                <div class="rArea checkRadio">
+                                    <input type="radio" name="radioLxp" id="listLxp" checked>
+                                    <label for="listLxp"><i class="radio-list">리스트로 보기</i></label>
+                                    <input type="radio" name="radioLxp" id="chartLxp">
+                                    <label for="chartLxp"><i class="radio-chart">차트로 보기</i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-archive">
+                                <span>동영상</span>
+                                <p>콘텐츠 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 콘텐츠</span>
+                                    <em class="fontColorGreen">254,564</em>
+                                </div>
+                                <div class="rArea checkRadio">
+                                    <input type="radio" name="radioArchive" id="listArchive" checked>
+                                    <label for="listArchive"><i class="radio-list">리스트로 보기</i></label>
+                                    <input type="radio" name="radioArchive" id="chartArchive">
+                                    <label for="chartArchive"><i class="radio-chart">차트로 보기</i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-evalsystem">
+                                <span>기초학력, 형성/단원 평가가</span>
+                                <p>진단 평가 시스템</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 진단 평가</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                                <div class="rArea checkRadio">
+                                    <input type="radio" name="radioEvalsystem" id="listEvalsystem" checked>
+                                    <label for="listEvalsystem"><i class="radio-list">리스트로 보기</i></label>
+                                    <input type="radio" name="radioEvalsystem" id="chartEvalsystem">
+                                    <label for="chartEvalsystem"><i class="radio-chart">차트로 보기</i></label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-learnmap">
+                                <span>성취기준</span>
+                                <p>학습맵</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
             </section>
         </div>
     </div>

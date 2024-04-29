@@ -34,4 +34,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     })
 
     clickListAddClass(menuLink, 'isCurrent');
+
+    const tabsNav = document.querySelectorAll('.tabsNav > li');
+    if (tabsNav) clickListAddClass(tabsNav, 'isCurrent');
 })

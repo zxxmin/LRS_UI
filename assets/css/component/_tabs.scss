@@ -11,3 +11,89 @@
         text-decoration: none;
     }
 }
+
+.tabsNav {
+    gap: 2rem;
+    li {
+        flex: 1;
+        min-width: 0;
+        width: calc(100% / 4);
+        background-color: rgba($white, 0.3);
+        border-radius: $radiusSm;
+        padding: $gapSm $gap;
+        position: relative;
+        @include type('TabM');
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            gap: $gapSm;
+            position: relative;
+            
+            .tabTit {
+                p {
+                    @include type('TabL');
+                }
+            }
+
+            .fncArea {
+                margin-bottom: 0;
+                em {
+                    font-size: $fontSizeXxlg;
+                }
+
+                .checkRadio {
+                    z-index: 1;
+                    position: relative;
+                }
+            }
+        }
+
+        &.isCurrent {
+            background-color: $white;
+            color: $gray3;
+            > div {
+                .tabTit {
+                    &::after {
+                        background-color: $blue0;
+                    }
+                    @each $cls, $icon in $tabIcons {
+                        &.#{$cls} {
+                            &::after {
+                                background-image: url(pathIcon(map-get($tabIcons,#{$cls}), $white, $iconLg));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.isCurrent) {
+            > div {
+                .fncArea {
+                    .checkRadio {
+                        z-index: 0;
+                        input[type=radio]+label,
+                        label.radio input+span,
+                        input[type=checkbox]+label,
+                        label.checkbox input+span {
+                            &::before {
+                                border-color: $gray2;
+                            }
+                            &::after {
+                                background-color: $gray2;
+                            }
+                        }
+
+                        input[type=radio]:checked+label,
+                        label.radio input:checked+span {
+                            &::after {
+                                background-color: $gray3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
