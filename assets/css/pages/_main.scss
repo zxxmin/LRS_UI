@@ -1,0 +1,198 @@
+.statistics-card-list-area {
+  display: flex;
+  gap: $gap;
+  .statistics-card {
+    background: $white;
+    border-radius: $radius;
+    padding:$fontSizeXlg $fontSizeXxxlg;
+    &:first-child {
+      flex-basis: 25%;
+    }
+    &:nth-child(2) {
+      flex-basis: 35%;
+    }
+    &:last-child {
+      flex-basis: 40%;
+    }
+
+    > span {
+      color: $gray3;
+      font-size: $fontSize;
+      display: block;
+    }
+    > strong {
+      font-size: $fontSizeLg;
+      line-height: 170%;
+      > span {
+        color: $gray3;
+        font-weight: 400;
+
+      }
+    }
+    .apexcharts-datalabel {
+      display: none;
+    }
+    .apexcharts-data-labels + text {
+      fill: $oragne0;
+    }
+    .apexcharts-yaxis-label tspan {
+      font-family: "Noto Sans KR", serif;
+      font-weight: 600;
+    }
+    .apexcharts-xaxis-label tspan {
+      fill: $gray3;
+      font-weight: 700;
+    }
+  }
+}
+
+#HourlyActivityStatisticsChart {
+  position: relative;
+  padding-right:7rem;
+  table {
+    width: 100%;
+    margin-top: $gapSm;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    th {
+      text-align: left;
+      color: $gray3;
+    }
+    tbody {
+        td {
+          background: #3685CF;
+          border-radius:$radiusXsm ;
+          height: 20px;
+        }
+        tr:first-child{
+          td {
+            opacity: 0.9;
+          }
+        }
+        tr:nth-child(2){
+            td {
+            opacity: 0.8;
+            }
+        }
+        tr:nth-child(3){
+            td {
+            opacity: 0.7;
+            }
+        }
+        tr:nth-child(4){
+            td {
+            opacity: 0.6;
+            }
+        }
+        tr:nth-child(5){
+            td {
+            opacity: 0.5;
+            }
+        }
+        tr:nth-child(6){
+            td {
+            opacity: 0.4;
+            }
+        }
+        tr:nth-child(7){
+            td {
+            opacity: 0.3;
+            }
+        }
+        tr:nth-child(8){
+            td {
+            opacity: 0.2;
+            }
+        }
+        tr:nth-child(9){
+            td {
+            opacity: 0.1;
+            }
+        }
+        tr:nth-child(10){
+            td {
+            opacity: 0.2;
+            }
+        }
+        tr:nth-child(11){
+            td {
+            opacity: 0.3;
+            }
+        }
+        tr:nth-child(12){
+            td {
+            opacity: 0.4;
+            }
+        }
+        tr:nth-child(13){
+            td {
+            opacity: 0.5;
+            }
+        }
+    }
+    tfoot {
+      td {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+  .tableBarInfo {
+    position: absolute;
+    right:0;
+    top:0;
+    display: flex;
+    gap : $gapXsm;
+    align-items: stretch;
+    height: 100%;
+    .bar {
+      width: 3rem;
+      border-radius: $radiusXsm;
+      background: linear-gradient(180deg, #3182CE 0%, #FFF 100%);
+    }
+    .tic {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #000000;
+      font-weight: 600;
+    }
+  }
+}
+.dayTrafficChartArea {margin-top: $gap; position: relative; overflow: hidden; padding: 50px 30px 20px;border-radius: 20px;background: linear-gradient(350deg, #2B2167 3.36%, #2D3748 84.23%); height: 58vh;}
+.dayTrafficChartArea .title_box {position: absolute; top:40px; left: 30px;}
+.dayTrafficChartArea h4 {margin:0; color: #CCE2FF;font-size: 10px;font-style: normal;font-weight: 700;line-height: 170%; /* 17px */}
+.dayTrafficChartArea strong {color: #FFF;font-size: 12px;font-style: normal;font-weight: 500;line-height: 170%;}
+#DayTrafficChart .apexcharts-xaxis {transform: translateY(10px)}
+#DayTrafficChart .apexcharts-yaxis {transform: translateX(0px)}
+#DayTrafficChart .apexcharts-legend {gap: 20px; padding-right: 200px}
+#DayTrafficChart .apexcharts-legend-text {padding-left:25px;}
+#DayTrafficChart .apexcharts-legend-marker {margin-top: -2px;}
+#DayTrafficChart .apexcharts-legend-series {display: flex; align-content: center;}
+select.ui-datepicker-year {width: 100% !important; border:none; background: transparent; color: #fff !important; text-align: center}
+
+.monthPickerBox {
+  position: absolute;
+  z-index: 9;
+  background: #8A8B9F;
+  border-radius: $radiusXsm;
+  top: 35px;
+  right: 35px;
+
+  input {
+    width: 15rem;
+    background: #8A8B9F;
+    border:none;
+    padding-left: 5rem;
+    color: #fff !important;
+    font-weight: 800;
+  }
+
+  .ui-monthpicker-trigger {
+    position: absolute;
+    width: 20px;
+    top:50%;
+    left: 20px;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,65 @@
+body {
+  &.login {
+    &::after {
+      content:'Welcome!';
+      color: $white;
+      margin:0 auto;
+      width: calc(100% - $gapLg);
+      left: 50%;
+      transform: translateX(-50%);
+      top: $gap;
+      border-radius: $radiusLg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: 'Noto Sans KR', serif;
+      font-size: 4rem;
+    }
+  }
+}
+
+.login-wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-box {
+    padding:5rem 3rem;
+    border-radius: $radiusLg;
+    background-color: $white;
+    width: 45rem;
+
+    img {
+      width: 23.8rem;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.login-form {
+  margin-top: 9rem;
+  .input-box {
+    label {
+      display: block;
+      width: 100%;
+      font-size:$fontSizeLg;
+      font-weight: 500;
+    }
+    input {
+      margin-top: $gapXsm;
+      width: 100%;
+    }
+    & + .input-box {
+      margin-top: $gap;
+    }
+  }
+  button {
+    margin-top: 9rem;
+    width: 100%;
+    font-size:$fontSizeXlg;
+    height: 5rem;
+  }
+}

@@ -21,7 +21,11 @@
 @import 'component/tabs';
 @import 'component/icon';
 
+/*pages*/
+@import "pages/main";
+@import "pages/login";
+
 /*layout*/
-@import 'layout/common'
+@import 'layout/common';
 
 /*pages*/
