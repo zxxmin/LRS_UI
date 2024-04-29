@@ -1,0 +1,33 @@
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: $gapXsm $gapSm;
+    height: 4rem;
+    text-decoration: none;
+    color: $white;
+    border-radius: $radiusXsm;
+    background-color: $btn;
+    transition: all 0.2s;
+
+    &.sm {
+        height: 2.2rem;
+        padding: $gapXxsm $gapXsm;
+        border-radius: $radiusXxsm;
+        background-color: $green0;
+    }
+
+    &.circle {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: rgba($gray3, 0.5);
+        padding: 0;
+    }
+}
+
+a.btn {
+    color: $white;
+}

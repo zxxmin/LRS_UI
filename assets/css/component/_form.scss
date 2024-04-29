@@ -1,0 +1,65 @@
+input:not([type=checkbox]):not([type=radio]),
+select,
+textarea,
+button {
+    font-family: $fontFamily;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    vertical-align: middle;
+}
+
+input[type=text],
+select {
+    padding: $gapXsm $gap;
+
+    color: $gray3;
+    border: 0.1rem solid $gray2;
+    border-radius: $radiusXsm;
+    transition: all 0.2s;
+
+    height: 4rem;
+
+    &::placeholder {
+        color: $gray3;
+    }
+    &:focus {
+        outline: 0;
+        border-color: $blue0;
+        box-shadow: inset 0 0 0 0.1rem $blue0;
+    }
+    &:disabled {
+        color: $gray2;
+        background-color: $gray1;
+    }
+
+    // &[class*="ico-"] {
+    //     padding: $gapXsm $gap $gapXsm $gapLg;
+    //     background-size: 1.2rem;
+    //     background-repeat: no-repeat;
+    //     background-position: 1rem center;
+
+    //     &.right {
+    //         padding: $gapXsm $gapLg $gapXsm $gap;
+    //         background-position: right 1rem center;
+    //     }
+
+    //     @each $cls,
+    //     $icon in $icons {
+    //         &.#{$cls} {
+    //             background-image: url(pathIcon(map-get($icons,#{$cls}),$black));
+    //         }
+    //     }
+    // }
+}
+
+select {
+    appearance: none;
+    background-size: 1.2rem;
+    background-repeat: no-repeat;
+    background-position: right $gapSm center;
+    // background-image: url(pathIcon(map-get($icons,"ico-down"), $grayColor4));
+    // &:disabled {
+    //     background-image: url(pathIcon(map-get($icons,"ico-down"), $grayColor4));
+    // }
+}

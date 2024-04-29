@@ -1,0 +1,84 @@
+@mixin customScroll {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        box-sizing: border-box;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($blueL, 0.5);
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-track {
+        width: 16px;
+        background-color: transparent;
+    }
+}
+
+@mixin hideElement {
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    margin: -0.1rem;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+//text-ellipsis
+// 한줄ex : @include ellipsis(1);
+// 두줄이상ex : @include ellipsis(2,1.5,3);
+@mixin ellipsis($line , $line-height:1.25) {
+	@if ($line == 1) {
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		word-wrap:normal;
+		width:100%;
+		overflow:hidden;
+	} @else {
+		display: -webkit-box;
+		overflow: hidden;
+		line-height: $line-height;
+		width: 100%;
+		text-overflow: ellipsis;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $line;
+	}
+}
+
+@mixin transition($property, $duration:0.3s, $delay:0s, $tf:linear) {
+    transition-property: $property;
+    transition-duration: $duration;
+    transition-delay: $delay;
+    transition-timing-function: $tf;
+}
+
+@mixin type($cls) {
+    @if ($cls == 'TabL') {
+        font-size: $fontSizeXxxlg;
+        font-weight: 700;
+        color: $black;
+    } @else if ($cls == 'TabM') {
+        font-size: $fontSize;
+        font-weight: 400;
+        color: $blueD;
+    } @else if ($cls == 'Input') {
+        font-size: $fontSizeLg;
+        font-weight: 400;
+        color: $gray3;
+    } @else if ($cls == 'Table') {
+        font-size: $fontSize;
+        font-weight: 400;
+        color: $blackL;
+    } @else if ($cls == 'BasicXL') {
+        font-size: $fontSizeXlg;
+        font-weight: 400;
+        color: $black;
+    } @else if ($cls == 'BasicL') {
+        font-size: $fontSizeLg;
+        font-weight: 400;
+        color: $black;
+    } @else if ($cls == 'BasicM') {
+        font-size: $fontSize;
+        font-weight: 400;
+        color: $black;
+    }
+}

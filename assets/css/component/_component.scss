@@ -1,0 +1,214 @@
+.pullH {
+    height: calc(100vh - (var(--container-padding) * 2))
+} 
+
+.txtHide {
+    @include hideElement();
+}
+.margin {
+    $sizes: (
+        xsm: 4,
+        sm: 8,
+        md: 16,
+        lg : 24,
+        xlg : 40
+    );
+    $directions: (
+        top,
+        right,
+        bottom,
+        left
+    );   
+    @each $direction in $directions {
+        &-#{$direction} {
+            @each $key, $size in $sizes {
+                &-#{$key}{
+                    margin-#{$direction}: #{$size} + 'px';
+                }
+            }
+        }
+    }
+}
+.percentWidth {
+    @for $i from 0 through 10  {
+        &#{$i} {
+            min-width: 0 !important;
+            width: #{$i*10} + '%' !important;
+        }
+    }    
+}
+.align {	
+    &-center {
+        text-align: center !important;
+    }
+    &-left {
+        text-align: left !important; 
+    }
+    &-right {
+        text-align: right !important; 
+    }
+}
+.valign { 
+    &-top {
+        vertical-align: top !important; 
+    }	
+    &-middle {
+        vertical-align: middle !important;
+    }
+    &-bottom {
+        vertical-align: bottom !important; 
+    }
+}
+.fontColor {
+    $colors : (        
+        "Gray" : $gray3,
+        "Blue" : $blue0,
+        "BlueD" : $blueD,
+        "Green" : $green0,
+        "Orange" : #ED8936,
+        "White" : $white,
+        "Black" : $black,
+        "BlackL" : $blackL,
+    );
+    @each $key, $color in $colors {
+        &#{$key} {
+            color: $color !important;
+        }
+    }
+}
+.fontSize {
+    $sizes : (
+        'Sm' : $fontSizeSm,
+        'lg' : $fontSizeLg,
+        'Xlg' : $fontSizeXlg,
+        'Xxlg' : $fontSizeXxlg,
+        'Xxxlg' : $fontSizeXxxlg,
+    );
+    @each $key, $size in $sizes {
+        &#{$key} {
+            font-size: $size !important;
+        }
+    }
+}
+
+%flexArea {
+    display: flex;
+    justify-content: space-between;
+    gap:$gapXsm;
+    &.lg {
+		gap:$gapXsm $gapSm;
+	}
+	&.sm {
+		gap:$gapXxsm;
+	}	
+   .lArea,
+   .rArea  {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       gap:$gapXsm $gapXsm;
+       > * {
+            margin-bottom: 0;
+       }
+        &:only-child {
+            flex:1;
+        }
+    }
+    .rArea  {
+        justify-content: flex-end;
+    }
+    &.center {
+		justify-content: center;
+	}
+	&.vcenter {
+		align-items: center;
+	}
+    .dirCol {
+        align-items: flex-start;
+    }
+}
+
+.titArea,
+.fncArea,
+.flexArea {
+    @extend %flexArea;
+    .lArea,
+    .rArea {
+        > * {
+            margin-bottom: 0;
+        }
+    }
+}
+.titArea,
+.fncArea {
+    margin-bottom: $gapXxsm; 
+    align-items: flex-end;
+}
+.flexArea {
+    justify-content: flex-start;
+    > * {
+		margin:0 !important;
+	}
+    .lArea,
+    .rArea {
+        flex:1;
+    }
+}
+.dirCol {
+	flex-direction: column !important;
+}
+
+.lnkFull,
+.linkFull {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-indent: -99999px;
+	opacity: .2;
+	z-index: 1;
+}
+
+.box {
+    padding: 2.4rem;
+	box-sizing: border-box;
+    border-radius: $radius;
+    overflow: hidden;
+    background-color: $white;
+    &.bgBox,
+    &.bgBorderBox {
+        background-color: $gray1;
+    }
+    &.bgBorderBox {
+        border: .1rem solid $gray2;
+    }
+}
+.boxTitArea {
+	margin-bottom: $gap;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+.boxTit {
+	display: block;
+	@include type('BasicXL');
+	margin-bottom: $gapXxsm;
+}
+
+.accessibility {
+    position: relative;
+    text-align: center;
+    a {
+        position: absolute;
+        z-index: 9999;
+        height: 0.1rem;
+        overflow: hidden;
+        &:focus {
+            height: auto;
+            padding: 1.6rem;
+            background: $blueD;
+            color: $white;
+        }
+    }
+}

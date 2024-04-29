@@ -1,0 +1,235 @@
+<html>
+<head>
+    <title>publish list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style>
+        body { padding: 0; margin: 0; overflow-y: scroll; font: 11px/1.2em "나눔고딕", NanumGothic, "맑은 고딕", "Malgun Gothic", Apple Gothic, "돋움", Dotum, "굴림", Gulim, sans-serif; }
+
+        h1, h2 { margin: 5px; font-family: tahoma, sans-serif; font-size: 16px; font-weight: bold; text-transform: capitalize; /*capitalize | uppercase | lowercase | none*/ }
+
+        h2 { font-size: 12px; }
+
+        a { text-decoration: none; color: #aaa; }
+
+        a.newWin { width: 6px; height: 6px; display: inline-block; text-indent: -9999px; border: 1px solid #777; margin: 0 5px; vertical-align: middle; position: relative; }
+
+        a.newWin:before { content: ''; width: 6px; height: 6px; position: absolute; left: 1px; bottom: 1px; border: 1px solid #777; background: #ddd; }
+
+        h1 a { color: #000; }
+
+        ul, li { margin: 0; padding: 0; list-style: none; }
+
+        body > ul { border-bottom: 1px #555 solid; display: none; }
+
+        li { display: block; padding: 8px 0 0 0; background-image: url("img/temp/dot.gif"); background-repeat: no-repeat; position: relative; }
+
+        li:before { content: ''; position: absolute; width: 2px; height: 2px; background: #555; top: 13px; }
+
+        li span { display: block; color: #666; margin-top: -5px; padding-bottom: 8px; }
+
+        li { background-color: #ccc; border-top: 1px #555 solid; }
+
+        li li { background-color: #ddd; border-top: 1px #777 dotted; }
+
+        li li li { background-color: #e9e9e9; border-top: 1px #999 dotted; }
+
+        li li li li { background-color: #eee; border-top: 1px #bbb dotted; }
+
+        li li li li li { background-color: #f3f3f3; border-top: 1px #ddd dotted; }
+
+        li li li li li li { background-color: #fff; border-top: 1px #eee dotted; }
+
+        li:before { left: 10px; }
+
+        li li:before { left: 20px; }
+
+        li li li:before { left: 30px; }
+
+        li li li li:before { left: 40px; }
+
+        li li li li li:before { left: 50px; }
+
+        li li li li li li:before { left: 60px; }
+
+        li a { margin-bottom: 8px; display: inline-block; }
+
+        li span,
+        li a { margin-left: 15px; }
+
+        li li span,
+        li li a { margin-left: 25px; }
+
+        li li li span,
+        li li li a { margin-left: 35px; }
+
+        li li li li span,
+        li li li li a { margin-left: 45px; }
+
+        li li li li li span,
+        li li li li li a { margin-left: 55px; }
+
+        li.on:after,
+        li.off:after { content: ''; position: absolute; right: 10px; top: 8px; }
+
+        li.on:after { content: '+' }
+
+        li.off:after { content: '-' }
+
+        li.off ul { display: none; }
+
+        .ready, .ready a { color: #000; }
+
+      
+
+        .design, .design a { color: pink; }
+        
+        .mod, .mod a { color: red; }
+
+        .working, .working a { color: blue !important; }
+
+        .add, .add a { color: green; }
+
+     
+
+        .temp, li.temp a { color: #ff6600; }
+
+        .x, .x a { color: #aaa; cursor: default; text-decoration: line-through; }
+
+        .before, .before a { color: #aaa; }
+
+        .guide { display: block; margin: 10px; font-size: 11px; }
+
+        .guide span { line-height: 1.5em; }
+
+        li time { color: #555; }
+
+        li.highlight { background-color: #a9c8fc }
+
+        li.highlight li { background-color: #d4e4fe }
+
+        .pubList { float: left; width: 350px; height: 100vh; overflow-y: scroll; }
+
+        .iframe-wrap { float: right; width: calc(100% - 350px); padding: 0; }
+
+        .iframe-wrap iframe { width: 100%; border: 0; margin: 0; padding: 0; height: 100vh; overflow: auto; }
+
+        .cb { clear: both; }
+
+        /********design : 디자인 요청, mod : 변경, ready : 작업완료, temp : 임시파일, x : 삭제대상 ********/
+    </style>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="../assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <script>
+        window.onload = function () {
+            var body = document.body;
+            obj = body.getElementsByTagName("ul")[0];
+            obj.style.display = "block";
+            writeLink(obj.getElementsByTagName("li"));
+        }
+        function writeLink(obj) {
+            for (var i = 0; i < obj.length; i++) {
+                var nm, lk, sp, date, dateArr;
+                if (obj[i].innerHTML.split("<")[0].search(",") != -1) {
+                    nm = obj[i].innerHTML.split(",")[0];
+                    lk = obj[i].innerHTML.split(",")[1].split("<")[0];
+                    if (obj[i].innerHTML.split(",").length > 2) {
+                        date = obj[i].innerHTML.split(",").slice(obj[i].innerHTML.split(",").length - 1, obj[i].innerHTML.split(",").length).join();
+                        dateArr = obj[i].innerHTML.split(",").slice(2, obj[i].innerHTML.split(",").length).join();
+                        sp = nm + "," + lk + "," + obj[i].innerHTML.split(",").slice(2, obj[i].innerHTML.split(",").length).join();
+                    } else {
+                        date = "";
+                        sp = nm + "," + lk;
+                    }
+                    lk = lk;
+                } else {
+                    nm = obj[i].innerHTML.split("<")[0];
+                    lk = "#none"
+                    sp = nm;
+                }
+                var child = obj[i].innerHTML.split(sp)[1];
+
+                if (lk == "javascript:;" || lk == "#none") obj[i].innerHTML = "<a href='" + lk + "'>" + nm + "</a>" + child;
+                else obj[i].innerHTML = "<a href='" + lk + "' target='pubView'>" + nm + "</a>" + "<a href='" + lk + "' class='newWin' target='preview' title='open new window'>new window</a>" + "<time title='" + dateArr + "'>" + date + "</time>" + "<span>" + lk + "</span>" + child;
+
+                if (child != "") {
+                    if (obj[i].getElementsByTagName("a")[0].addEventListener) obj[i].getElementsByTagName("a")[0].addEventListener('click', switchOnOff, false);
+                    else obj[i].getElementsByTagName("a")[0].attachEvent('onclick', switchOnOff);
+                    if (!$(obj[i]).hasClass('off')) {
+                        $(obj[i]).addClass('on');
+                    }
+                }
+            }
+        }
+        function switchOnOff(event) {
+            var target = (event.target) ? event.target : event.srcElement;
+            target = $(target).parent();
+            if (target.hasClass('on')) target.addClass('off').removeClass('on');
+            else target.addClass('on').removeClass('off');
+        }
+        function switchOnOffAll(event) {
+            var target = (event.target) ? event.target : event.srcElement;
+            if (target.innerHTML.indexOf("펼치기") != -1) {
+                target.innerHTML = target.innerHTML.replace("펼치기", "닫기");
+                $(".off").removeClass('off').addClass('on');
+            } else {
+                target.innerHTML = target.innerHTML.replace("닫기", "펼치기");
+                $(".on").removeClass('on').addClass('off');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="pubList">
+        <h1><a href="index.html" target="_parent">publish list</a></h1>
+        <h2>publish</h2>
+
+        <div class="guide">
+            <span class="ready">■ 검은색 - 퍼블리싱 완료</span><br />
+            <span class="before">■ 회색 - 작업전</span><br />
+            <span class="working">■ 파란색 - 작업중</span><br />
+            <span class="design">■ 분홍색 - 디자인 요청</span><br />
+            <span class="mod">■ 빨간색 - 변경된 파일</span><br />
+            <span class="add">■ 초록색 - 추가</span><br /><br />
+            <span class="x">■ 작업안함</span><br /><br />
+            <a href="#none" title="전체 목록 토글" onclick="switchOnOffAll(event);">전체 펼치기</a>
+        </div>
+        <ul class="ready">
+            <li>
+                common
+                <ul>
+                    <li>
+                        Guide
+                        <ul>
+                            <li>Guide</li>
+                        </ul>
+                    </li>
+                    <li>
+                        layout
+                        <ul>
+                            <li>layout 선생님</li>
+                        </ul>
+                    </li>
+                    <li>
+                        sub
+                        <ul>
+                            <li>list</li>
+                        </ul>
+                    </li>
+                    <li>
+                        txt-none
+                        <ul>
+                            <li>txt-none</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="iframe-wrap">
+        <iframe id="pubView" name="pubView"></iframe>
+    </div>
+    <div class="cb"></div>
+</body>
+</html>
