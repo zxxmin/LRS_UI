@@ -26,17 +26,17 @@
                 <li class="gnb-dashboard">
                     <a href="#none">Dashboard</a>
                     <ul>
-                        <li class="ico-statistics"><a href="#none">통계</a></li>
-                        <li class="ico-learning"><a href="#none">학습활동</a></li>
-                        <li class="ico-learner"><a href="#none">학습자 활동</a></li>
+                        <li class="gnb-sm-statistics"><a href="#none">통계</a></li>
+                        <li class="gnb-sm-learning"><a href="#none">학습활동</a></li>
+                        <li class="gnb-sm-learner"><a href="#none">학습자 활동</a></li>
                     </ul>
                 </li>
                 <li class="gnb-xapi"><a href="#none">xAPIData</a></li>
                 <!-- <li class="gnb-edit">
                     <a href="#none">EDIT</a>
                     <ul>
-                        <li class="ico-manager"><a href="#none">관리자 관리</a></li>
-                        <li class="ico-sitemng"><a href="#none">사이트 관리</a></li>
+                        <li class="gnb-sm-manager"><a href="#none">관리자 관리</a></li>
+                        <li class="gnb-sm-sitemng"><a href="#none">사이트 관리</a></li>
                     </ul>
                 </li> -->
             </ul>
@@ -69,6 +69,7 @@
                     <span>학습활동 - LXP</span>
                 </h1>
 
+                <!-- 학습활동 nav -->
                 <ul class="tabsNav">
                     <li class="isCurrent">
                         <a href="#none" class="linkFull"></a>
@@ -80,6 +81,70 @@
                             <div class="fncArea">
                                 <div class="lArea dirCol">
                                     <span>금일까지 등록된 LXP</span>
+                                    <em class="fontColorGreen">85,256</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-archive">
+                                <span>동영상, 수업설계, 수업자료</span>
+                                <p>콘텐츠 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 콘텐츠</span>
+                                    <em class="fontColorGreen">254,564</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-question">
+                                <span>문항</span>
+                                <p>AI 문항 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 AI문항</span>
+                                    <em class="fontColorGreen">254,564</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-evalsystem">
+                                <span>기초학력, 형성/단원 평가</span>
+                                <p>진단 평가 시스템</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 진단 평가</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- 학습자 활동 nav -->
+                <ul class="tabsNav">
+                    <li class="isCurrent">
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-lxp">
+                                <span>교과/과목</span>
+                                <p>LXP</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습된 LXP</span>
                                     <em class="fontColorGreen">85,256</em>
                                 </div>
                                 <div class="rArea checkRadio">
@@ -100,7 +165,7 @@
                             </div>
                             <div class="fncArea">
                                 <div class="lArea dirCol">
-                                    <span>금일까지 등록된 콘텐츠</span>
+                                    <span>금일까지 학습한 콘텐츠</span>
                                     <em class="fontColorGreen">254,564</em>
                                 </div>
                                 <div class="rArea checkRadio">
@@ -116,33 +181,12 @@
                         <a href="#none" class="linkFull"></a>
                         <div>
                             <div class="tabTit tab-question">
-                                <span>문항</span>
-                                <p>AI 문항 아카이브</p>
-                            </div>
-                            <div class="fncArea">
-                                <div class="lArea dirCol">
-                                    <span>금일까지 등록된 AI문항</span>
-                                    <em class="fontColorGreen">254,564</em>
-                                </div>
-                                <div class="rArea checkRadio">
-                                    <input type="radio" name="radioArchive" id="listArchive" checked>
-                                    <label for="listArchive"><i class="radio-list">리스트로 보기</i></label>
-                                    <input type="radio" name="radioArchive" id="chartArchive">
-                                    <label for="chartArchive"><i class="radio-chart">차트로 보기</i></label>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#none" class="linkFull"></a>
-                        <div>
-                            <div class="tabTit tab-question">
-                                <span>기초학력, 형성/단원 평가가</span>
+                                <span>기초학력, 형성/단원 평가</span>
                                 <p>진단 평가 시스템</p>
                             </div>
                             <div class="fncArea">
                                 <div class="lArea dirCol">
-                                    <span>금일까지 등록된 진단 평가</span>
+                                    <span>금일까지 학습한 진단 평가</span>
                                     <em class="fontColorGreen">523,257</em>
                                 </div>
                                 <div class="rArea checkRadio">
@@ -154,7 +198,7 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#none" class="linkFull"></a>
                         <div>
                             <div class="tabTit tab-learnmap">
@@ -162,9 +206,10 @@
                                 <p>학습맵</p>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
 
+                <!-- xAPIData Nav -->
                 <ul class="tabsNavSm">
                     <li class="isCurrent">
                         <a href="#none" class="linkFull"></a>

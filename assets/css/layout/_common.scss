@@ -1,7 +1,11 @@
 :root {
-    --gnb-width: 25.6rem;
     --container-padding: 4rem;
+    --gnb-width: 25.6rem;
     --logo-height: 5rem;
+
+    --sectionTit-height: 6.5rem;
+    --tabsNav-height: 16.4rem;
+    --tabsNavSm-height: 15.5rem;
 }
 
 div.CONTAINER {
@@ -165,10 +169,6 @@ div.CONTAINER {
                         }
                     }
                 }
-            }
-
-            .logout {
-                width: 100%;
             }
         }
     }

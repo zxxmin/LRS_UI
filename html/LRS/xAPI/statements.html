@@ -24,9 +24,9 @@
                 <li class="gnb-dashboard">
                     <a href="../dashboard/index.html">Dashboard</a>
                     <ul>
-                        <li class="ico-statistics"><a href="../dashboard/index.html">통계</a></li>
-                        <li class="ico-learning isCurrent"><a href="../dashboard/learning_lxp.html">학습활동</a></li>
-                        <li class="ico-learner"><a href="../dashboard/activity_diag.html">학습자 활동</a></li>
+                        <li class="gnb-sm-statistics"><a href="../dashboard/index.html">통계</a></li>
+                        <li class="gnb-sm-learning isCurrent"><a href="../dashboard/learning_lxp.html">학습활동</a></li>
+                        <li class="gnb-sm-learner"><a href="../dashboard/activity_diag.html">학습자 활동</a></li>
                     </ul>
                 </li>
                 <li class="gnb-xapi isOpen"><a href="./statements.html">xAPIData</a></li>
@@ -54,9 +54,10 @@
         </nav>
 
         <div class="CONTENT">
-            <section>
+            <section class="xApi statements">
                 <h1 class="sectionTit">
                     Pages / xAPIData
+                    <span>Statements</span>
                 </h1>
 
                 <ul class="tabsNavSm">
@@ -90,8 +91,309 @@
                     </li>
                 </ul>
 
-                <div class="box">
-                    
+                <div class="box xApiBox">
+                    <div class="fncArea">
+                        <div class="rArea">
+                            <button class="btn xApiBtn">CSV 다운로드</button>
+                            <div class="selectBox">
+                                <input type="checkbox" id="select_statements">
+                                <label for="select_statements" class="btn xApiBtn">항목 선택</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="statements_id">
+                                        <label for="statements_id">ID</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_actor">
+                                        <label for="statements_actor">Actor</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_verb">
+                                        <label for="statements_verb">Verb</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_object">
+                                        <label for="statements_object">Object</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_stored">
+                                        <label for="statements_stored">Stored</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_timestamp">
+                                        <label for="statements_timestamp">Timestamp</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_authority">
+                                        <label for="statements_authority">Authority</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_success">
+                                        <label for="statements_success">Success</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_complete">
+                                        <label for="statements_complete">Complete</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_score">
+                                        <label for="statements_score">Score</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_registration">
+                                        <label for="statements_registration">Registration</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="statements_response">
+                                        <label for="statements_response">Response</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tbl-list-area">
+                        <ul class="tbl-list">
+                            <li class="thead">
+                                <div class="accordion_wrap">
+                                    <span>Actor</span>
+                                    <span>Verb</span>
+                                    <span>Object</span>
+                                    <span>Stored</span>
+                                    <span>Data</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>
+                                        <div class=search>
+                                            <input type="text" class=ico-search title="검색어 입력">
+                                            <button class="btn ico-close">취소</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class=search>
+                                            <input type="text" class=ico-search title="검색어 입력">
+                                            <button class="btn ico-close">취소</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class=search>
+                                            <input type="text" class=ico-search title="검색어 입력">
+                                            <button class="btn ico-close">취소</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class=search>
+                                            <input type="text" class=ico-search title="검색어 입력">
+                                            <button class="btn ico-close">취소</button>
+                                        </div>
+                                    </div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accordion_wrap">
+                                    <div>이윤미</div>
+                                    <div>viewed</div>
+                                    <div>다채움</div>
+                                    <div>2024-04-26T05:06:08Z</div>
+                                    <div class="detailBtn">
+                                        <button class="btn sm">상세보기</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

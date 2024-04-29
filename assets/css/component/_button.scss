@@ -9,7 +9,6 @@
     text-decoration: none;
     color: $white;
     border-radius: $radiusXsm;
-    background-color: $btn;
     transition: all 0.2s;
 
     &.sm {
@@ -25,6 +24,15 @@
         border-radius: 50%;
         background-color: rgba($gray3, 0.5);
         padding: 0;
+    }
+
+    &.xApiBtn {
+        background-color: $blue0;
+    }
+    
+    &.logout {
+        width: 100%;
+        background-color: $logoutBtn;
     }
 }
 

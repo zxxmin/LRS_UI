@@ -1,0 +1,55 @@
+.xApi {
+    .xApiBox {
+        height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
+        overflow-y: scroll;
+
+        .selectBox {
+            position: relative;
+            &::after {
+                content: '';
+                width: 1rem;
+                height: 1rem;
+                border-bottom: .2rem solid $white;
+                border-left: .2rem solid $white;
+                position: absolute;
+                right: 1.6rem;
+                top: 1rem;
+                transform: rotate(-45deg);
+            }
+            > input {
+                &+label {
+                    width: 16rem;
+                    margin-right: 0;
+                    justify-content: flex-start;
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+                &:checked ~ ul {
+                    display: block;
+                }
+            }
+            ul {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                border: .1rem solid $gray2;
+                border-radius: $radiusXsm;
+                padding-top: $gapXsm;
+                > li {
+                    padding: $gapXsm $gapSm;
+                    &:nth-child(even) {
+                        background-color: $gray6;
+                    }
+                }
+            }
+        }
+
+        .detailBtn {
+            justify-content: center;
+        }
+    }
+}

@@ -133,6 +133,7 @@ label.checkbox input+span {
         background-repeat: no-repeat;
         background-position: center;
         // background-image: url(pathIcon(map-get($icons,"ico-form-check"), $grayColor3));
+        
     }
 }
 
@@ -164,7 +165,7 @@ label.radio input:disabled+span {
 // input[type=checkbox]:disabled+label,
 // label.checkbox input:disabled+span {
 //     &::after {
-//         background-image: url(pathIcon(map-get($icons,"ico-form-check"), $grayColor3));
+//         background-image: url(pathIcon(map-get($icons,"ico-form-check"), $gray2));
 //     }
 // }
 
@@ -175,22 +176,12 @@ label.radio input:disabled+span {
     }
 }
 
-// input[type=checkbox]:checked+label,
-// input[type=radio]:checked+label,
-// label.checkbox input:checked+span,
-// label.radio input:checked+span {
-//     &::before {
-//         border-color: $blueD;
-//         background-color: $blueD;
-//     }
-// }
-
-// input[type=checkbox]:checked+label,
-// label.checkbox input:checked+span {
-//     &::after {
-//         background-image: url(pathIcon(map-get($icons,"ico-form-check"), $white));
-//     }
-// }
+input[type=checkbox]:checked+label,
+label.checkbox input:checked+span {
+    &::after {
+        background-image: url(pathIcon(map-get($icons,"ico-form-check"), $black, 24));
+    }
+}
 
 input[type=radio]:checked+label,
 label.radio input:checked+span {
