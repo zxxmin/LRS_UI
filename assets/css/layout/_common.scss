@@ -18,6 +18,8 @@ div.CONTAINER {
         border-radius: $radius;
         padding: $gapSm;
         z-index: 10;
+        position: sticky;
+        top: var(--container-padding);
 
         h1.logo {
             position: relative;

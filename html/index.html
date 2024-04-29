@@ -118,8 +118,8 @@
 
         /********design : 디자인 요청, mod : 변경, ready : 작업완료, temp : 임시파일, x : 삭제대상 ********/
     </style>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script src="../assets/js/vendors/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="../assets/js/vendors/jquery-3.6.0.min.js"></script> -->
     <script>
         window.onload = function () {
             var body = document.body;
@@ -197,32 +197,37 @@
         </div>
         <ul class="ready">
             <li>
-                common
+                좌측메뉴
                 <ul>
+                    <li>좌측 메뉴, LRS/common/layout.html</li>
+                </ul>
+            </li>
+            <li>
+                로그인
+                <ul>
+                    <li>로그인, LRS/login/login.html</li>
+                </ul>
+            </li>
+            <li>
+                대시보드
+                <ul>
+                    <li>통계, LRS/dashboard/index.html</li>
                     <li>
-                        Guide
+                        학습활동
                         <ul>
-                            <li>Guide</li>
+                            <li>LXP, LRS/dashboard/learning_lxp.html</li>
+                            <li>콘텐츠 아카이브, LRS/dashboard/learning_content.html</li>
+                            <li>AI 문항 아카이브, LRS/dashboard/learning_ai.html</li>
+                            <li>진단평가 시스템, LRS/dashboard/learning_diag.html</li>
                         </ul>
                     </li>
-                    <li>
-                        layout
-                        <ul>
-                            <li>layout 선생님</li>
-                        </ul>
-                    </li>
-                    <li>
-                        sub
-                        <ul>
-                            <li>list</li>
-                        </ul>
-                    </li>
-                    <li>
-                        txt-none
-                        <ul>
-                            <li>txt-none</li>
-                        </ul>
-                    </li>
+                    <li>학습자활동</li>
+                </ul>
+            </li>
+            <li>
+                xAPIData
+                <ul>
+                    <li>Statements, LRS/xAPI/statements.html</li>
                 </ul>
             </li>
         </ul>
