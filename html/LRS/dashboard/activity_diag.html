@@ -27,8 +27,8 @@
                     <a href="./index.html">Dashboard</a>
                     <ul>
                         <li class="ico-statistics"><a href="./index.html">통계</a></li>
-                        <li class="ico-learning isCurrent"><a href="./learning_lxp.html">학습활동</a></li>
-                        <li class="ico-learner"><a href="./activity_diag.html">학습자 활동</a></li>
+                        <li class="ico-learning "><a href="./learning_lxp.html">학습활동</a></li>
+                        <li class="ico-learner isCurrent"><a href="./learning_diag.html">학습자 활동</a></li>
                     </ul>
                 </li>
                 <li class="gnb-xapi"><a href="../xAPI/statements.html">xAPIData</a></li>
@@ -59,73 +59,38 @@
             <section>
                 <h1 class="sectionTit">
                     Pages / Dashboard
-                    <span>학습활동 - LXP</span>
+                    <span>학습자 활동  - 진단 평가 시스템</span>
                 </h1>
-
-                <ul class="tabsNav">
-                    <li>
-                        <a href="./learning_lxp.html" class="linkFull"></a>
-                        <div>
-                            <div class="tabTit tab-lxp">
-                                <span>교과/과목</span>
-                                <p>LXP</p>
-                            </div>
-                            <div class="fncArea">
-                                <div class="lArea dirCol">
-                                    <span>금일까지 학습한 LXP</span>
-                                    <em class="fontColorGreen">85,256</em>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="isCurrent">
-                        <a href="./learning_content.html" class="linkFull"></a>
-                        <div>
-                            <div class="tabTit tab-archive">
-                                <span>동영상, 수업설계, 수업자료</span>
-                                <p>콘텐츠 아카이브</p>
-                            </div>
-                            <div class="fncArea">
-                                <div class="lArea dirCol">
-                                    <span>금일까지 학습한 콘텐츠</span>
-                                    <em class="fontColorGreen">254,564</em>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="./learning_ai.html" class="linkFull"></a>
-                        <div>
-                            <div class="tabTit tab-question">
-                                <span>문항</span>
-                                <p>AI 문항 아카이브</p>
-                            </div>
-                            <div class="fncArea">
-                                <div class="lArea dirCol">
-                                    <span>금일까지 학습한 진단 평가</span>
-                                    <em class="fontColorGreen">523,257</em>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="./learning_diag.html" class="linkFull"></a>
-                        <div>
-                            <div class="tabTit tab-learnmap">
-                                <span>기초학력, 형성/단원평가</span>
-                                <p>진단 평가 시스템</p>
-                            </div>
-                            <div class="fncArea">
-                                <div class="lArea dirCol">
-                                    <span>금일까지 등록된 진단 평가</span>
-                                    <em class="fontColorGreen">523,257</em>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="listFilterBox">
+                    <div class="input_box">
+                        <select class="noFlex">
+                            <option value="">2022년 개정</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <select>
+                            <option value="">지역 선택</option>
+                        </select>
+                        <select>
+                            <option value="">학교급 선택</option>
+                        </select>
+                        <select>
+                            <option value="">학교 선택</option>
+                        </select>
+                        <select>
+                            <option value="">학년 선택</option>
+                        </select>
+                        <select>
+                            <option value="">반 선택</option>
+                        </select>
+                        <select>
+                            <option value="">번호 선택</option>
+                        </select>
+                    </div>
+                </div>
 
             </section>
+
 
             <section>
                 <div class="tbl-list-area">
@@ -319,6 +284,27 @@
                 prevEl: '.pv',
             },
 
+        });
+
+
+        // 가장 가까운 부모 찾는 함수
+        function findClosestParent(element, className) {
+            while (element) {
+                if (element.classList.contains(className)) {
+                    return element;
+                }
+                element = element.parentElement;
+            }
+            return null;
+        }
+
+        document.querySelector('.tbl-list').addEventListener('click', function(event) {
+            if (event.target.matches('.accordion_wrap .btn.sm')) {
+                const accordionWrap = findClosestParent(event.target, 'accordion_wrap');
+                if (accordionWrap) {
+                    accordionWrap.classList.toggle('on');
+                }
+            }
         });
     </script>
 </body>

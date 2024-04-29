@@ -118,3 +118,30 @@
 
   }
 }
+
+.listFilterBox {
+  background: $white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: $radius;
+  width: max-content;
+  .input_box {
+    display: flex;
+    gap: $gapSm;
+    > *:not(.noFlex) {
+      flex:1;
+    }
+    & + .input_box {
+      margin-top: $gapSm;
+    }
+    select {
+      padding-right:4rem;
+      background: url("../images/common/ico_select_bg.svg") no-repeat right 1.6rem center / 1rem 2rem;
+    }
+
+    .search {
+      padding-left:4rem;
+      background: url("../images/common/ico_search.svg") no-repeat left 1.6rem center / 1.5rem 1.5rem;
+    }
+  }
+}
