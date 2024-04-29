@@ -62,6 +62,7 @@ body::after {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top 35% center;
+  z-index: -1;
 }
 
 @media (any-pointer: coarse) {
