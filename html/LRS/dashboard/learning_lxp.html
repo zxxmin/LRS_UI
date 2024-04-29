@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMLIE LRS</title>
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <!-- <script src="../../../assets/js/_layout.js"></script> -->
+    <script src="../../../assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="accessibility">
+        <a href="#skipToContents" title="콘텐츠를 바로 볼 수 있도록 건너뛰기합니다.">콘텐츠 바로가기</a>
+    </div>
+
+    <div class="CONTAINER">
+        <nav class="GNB pullH">
+            <h1 class="logo"><a href="#none">SMILE LRS</a></h1>
+
+            <ul class="menuList">
+                <li class="gnb-dashboard">
+                    <a href="#none">Dashboard</a>
+                    <ul>
+                        <li class="ico-statistics"><a href="#none">통계</a></li>
+                        <li class="ico-learning"><a href="#none">학습활동</a></li>
+                        <li class="ico-learner"><a href="#none">학습자 활동</a></li>
+                    </ul>
+                </li>
+                <li class="gnb-xapi"><a href="#none">xAPIData</a></li>
+            </ul>
+
+            <div>
+                <div class="gsSwiperWrap">
+                    <button class="btn circle pv"><span class="txtHide">이전으로</span></button>
+                    <div class="swiper gsSwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <img src="../../../assets/images/certi/gs_certi.png" alt="GS인증서">
+                                <span>GS인증서_SMILELRS</span>
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="../../../assets/images/certi/copyright.png" alt="저작권등록증">
+                                <span>저작권 등록증_SMILELRS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn circle fw"><span class="txtHide">다음으로</span></button>
+                </div>
+                <button class="btn logout" onclick="window.location.href='login.html'">logout</button>
+            </div>
+        </nav>
+
+        <div class="CONTENT">
+            <section>
+                <h1 class="sectionTit">
+                    Pages / Dashboard
+                    <span>학습활동 - LXP</span>
+                </h1>
+
+                <ul class="tabsNav">
+                    <li class="isCurrent">
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-lxp">
+                                <span>교과/과목</span>
+                                <p>LXP</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 LXP</span>
+                                    <em class="fontColorGreen">85,256</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-archive">
+                                <span>동영상, 수업설계, 수업자료</span>
+                                <p>콘텐츠 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 콘텐츠</span>
+                                    <em class="fontColorGreen">254,564</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-evalsystem">
+                                <span>문항</span>
+                                <p>AI 문항 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 학습한 진단 평가</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#none" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-learnmap">
+                                <span>기초학력, 형성/단원평가</span>
+                                <p>진단 평가 시스템</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 진단 평가</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section>
+                <div class="tbl-list-area">
+                    <div class="tbl-list-title">
+                        <h3>LXP</h3>
+                        <strong>85,256<span> 조회 됨</span></strong>
+                    </div>
+                    <ul class="tbl-list">
+                        <li class="thead">
+                            <div class="accordion_wrap">
+                                <span>No.</span>
+                                <button>학교급</button>
+                                <button>학년</button>
+                                <button>학기</button>
+                                <button>교과</button>
+                                <button>과목</button>
+                                <button>단원</button>
+                                <button class="width_auto">차시</button>
+                                <button>출판사</button>
+                                <button>저자</button>
+                                <button>조회</button>
+                                <span>상세</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap on">
+                                <div>000001</div>
+                                <div>초등학교</div>
+                                <div>4학년</div>
+                                <div>2학기</div>
+                                <div>과학</div>
+                                <div>과학</div>
+                                <div>물의 여행</div>
+                                <div class="width_auto">빗방울의 지구 여행(110~111p)</div>
+                                <div>아이스크림 미디어</div>
+                                <div>홍길동</div>
+                                <div>
+                                    <div class="bar">
+                                        <div class="current" style="width: 70%"></div>
+                                        <span class="count">4,847</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn sm">상세보기</button>
+                                </div>
+                            </div>
+                            <div class="accordion_content">
+                                <strong class="title">문항 리스트</strong>
+                                <ul class="tbl-list">
+                                    <li class="thead">
+                                        <div class="accordion_wrap">
+                                            <span>No.</span>
+                                            <span class="width_auto">학교급</span>
+                                            <span>배점</span>
+                                            <span>난이도</span>
+                                            <span>정답률</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="accordion_wrap">
+                                            <div>01</div>
+                                            <div class="width_auto">[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]</div>
+                                            <div>5점</div>
+                                            <div>매우 쉬움</div>
+                                            <div>
+                                                <div class="bar">
+                                                    <div class="current" style="width: 70%"></div>
+                                                    <span class="count">70%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div>000001</div>
+                                <div>초등학교</div>
+                                <div>4학년</div>
+                                <div>2학기</div>
+                                <div>과학</div>
+                                <div>과학</div>
+                                <div>물의 여행</div>
+                                <div class="width_auto">빗방울의 지구 여행(110~111p)</div>
+                                <div>아이스크림 미디어</div>
+                                <div>홍길동</div>
+                                <div>
+                                    <div class="bar">
+                                        <div class="current" style="width: 70%"></div>
+                                        <span class="count">4,847</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn sm">상세보기</button>
+                                </div>
+                            </div>
+                            <div class="accordion_content">
+                                <strong class="title">문항 리스트</strong>
+                                <ul class="tbl-list">
+                                    <li class="thead">
+                                        <div class="accordion_wrap">
+                                            <span>No.</span>
+                                            <span class="width_auto">학교급</span>
+                                            <span>배점</span>
+                                            <span>난이도</span>
+                                            <span>정답률</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="accordion_wrap">
+                                            <div>01</div>
+                                            <div class="width_auto">[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]</div>
+                                            <div>5점</div>
+                                            <div>매우 쉬움</div>
+                                            <div>
+                                                <div class="bar">
+                                                    <div class="current" style="width: 70%"></div>
+                                                    <span class="count">70%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div>000001</div>
+                                <div>초등학교</div>
+                                <div>4학년</div>
+                                <div>2학기</div>
+                                <div>과학</div>
+                                <div>과학</div>
+                                <div>물의 여행</div>
+                                <div class="width_auto">빗방울의 지구 여행(110~111p)</div>
+                                <div>아이스크림 미디어</div>
+                                <div>홍길동</div>
+                                <div>
+                                    <div class="bar">
+                                        <div class="current" style="width: 70%"></div>
+                                        <span class="count">4,847</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn sm">상세보기</button>
+                                </div>
+                            </div>
+                            <div class="accordion_content">
+                                <strong class="title">문항 리스트</strong>
+                                <ul class="tbl-list">
+                                    <li class="thead">
+                                        <div class="accordion_wrap">
+                                            <span>No.</span>
+                                            <span class="width_auto">학교급</span>
+                                            <span>배점</span>
+                                            <span>난이도</span>
+                                            <span>정답률</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="accordion_wrap">
+                                            <div>01</div>
+                                            <div class="width_auto">[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]ㅣ [4국05-05] ㅣ[4국05-05] ㅣ [4국05-05] ㅣ [4국05-05]</div>
+                                            <div>5점</div>
+                                            <div>매우 쉬움</div>
+                                            <div>
+                                                <div class="bar">
+                                                    <div class="current" style="width: 70%"></div>
+                                                    <span class="count">70%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.gsSwiper', {
+            loop: true,
+            slidesPerView: 1,
+
+            navigation: {
+                nextEl: '.fw',
+                prevEl: '.pv',
+            },
+
+        });
+
+
+        // 가장 가까운 부모 찾는 함수
+        function findClosestParent(element, className) {
+            while (element) {
+                if (element.classList.contains(className)) {
+                    return element;
+                }
+                element = element.parentElement;
+            }
+            return null;
+        }
+
+        document.querySelector('.tbl-list').addEventListener('click', function(event) {
+            if (event.target.matches('.accordion_wrap .btn.sm')) {
+                const accordionWrap = findClosestParent(event.target, 'accordion_wrap');
+                if (accordionWrap) {
+                    accordionWrap.classList.toggle('on');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

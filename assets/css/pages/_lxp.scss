@@ -1,0 +1,121 @@
+.tbl-list-area {
+  margin-top: 3rem;
+  padding:3.5rem 2rem;
+  background: $white;
+  border-radius:$radius ;
+}
+
+.tbl-list-title {
+  h3 {
+    font-size:$fontSizeXlg;
+    font-weight: 700;
+  }
+  strong {
+    margin-top: 1rem;
+    display: block;
+    font-size:$fontSizeLg;
+    font-weight: 700;
+    color: $gray4;
+    &:before {
+      content:'';
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url("../images/common/ico_list_check.svg") no-repeat center;
+      vertical-align: middle;
+      margin-right:0.4rem;
+    }
+
+    span {
+      font-weight: 500;
+      color:$gray3 ;
+    }
+  }
+}
+
+.tbl-list {
+  margin-top: 2rem;
+
+  > li {
+    border-bottom: 1px solid $gray2;
+
+    .accordion_wrap {
+      display: flex;
+      justify-content: space-between;
+
+      & > * {
+        flex: 0.2;
+        text-align: left;
+        font-size:$fontSize;
+        padding: 2rem 1rem;
+
+        display: flex;
+        align-items: center;
+      }
+
+      & > *.width_auto {
+        flex: 1;
+      }
+
+      &.thead > * {
+        color: $gray3;
+        font-weight: 700;
+        padding: 1.5rem 1rem;
+      }
+
+      .bar {
+        position: relative;
+        top:0.5rem;
+        width: 80%;
+        background: $gray2;
+        border-radius: $radiusXsm;
+        height: 0.5rem;
+
+        .current {
+          position: absolute;
+          height: 100%;
+          border-radius: $radiusXsm;
+          background: $blue0;
+        }
+        .count {
+          position: absolute;
+          bottom: 0.6rem;
+          color: $blue0;
+          font-size:$fontSizeLg;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .accordion_content {
+      display: none;
+      background: $gray1;
+      padding:3rem 3rem;
+      border-radius: $radius;
+      margin:2rem 0;
+      width: 80%;
+
+      .title {
+        font-size:$fontSizeXlg;
+      }
+
+      .accordion_wrap > * {
+        flex:0.1;
+        &.width_auto {
+         flex:1;
+        }
+      }
+    }
+
+    .accordion_wrap.on {
+      .btn.sm {
+        background: $oragne0;
+      }
+    }
+
+    .accordion_wrap.on + .accordion_content {
+      display: block;
+    }
+
+  }
+}
