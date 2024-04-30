@@ -97,6 +97,11 @@
         flex: 1;
       }
 
+      & > *.noData {
+        flex: 1;
+        justify-content: center;
+      }
+
       &.thead > * {
         color: $gray3;
         font-weight: 700;
@@ -185,4 +190,51 @@
       background: #fff url("../images/common/ico_search.svg") no-repeat left 1.6rem center / 1.5rem 1.5rem;
     }
   }
+}
+
+.pagination_box {
+  display: flex;
+  align-items: center;
+  gap: $gapXsm;
+  justify-content: center;
+  margin-top: 2rem;
+  .pagination {
+    display: flex;
+    align-items: center;
+    gap: $gapXsm;
+    justify-content: center;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    background: $white;
+    border:1px solid #C8C8C8;
+    border-radius: $radiusXsm;
+    font-size:$fontSizeLg;
+    font-weight: 500;
+    //font-family: "Plus Jakarta Sans", serif;
+    &.on {
+      background: $blue0;
+      border-color: $blue0;
+      color: $white;
+    }
+  }
+
+  button.first {
+    background: url("../images/common/ico_btn_first.svg") no-repeat center;
+  }
+  button.prev {
+    background: url("../images/common/ico_btn_prev.svg") no-repeat center;
+  }
+  button.next {
+    background: url("../images/common/ico_btn_next.svg") no-repeat center;
+  }
+  button.last {
+    background: url("../images/common/ico_btn_last.svg") no-repeat center;
+  }
+
 }

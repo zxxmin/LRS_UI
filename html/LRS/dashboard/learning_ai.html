@@ -133,7 +133,7 @@
                         <h3>AI 문항 아카이브</h3>
                         <strong>523,257개<span> 조회 됨</span></strong>
                     </div>
-                    <ul class="tbl-list">
+                    <ul id="tblList" class="tbl-list">
                         <li class="thead">
                             <div class="accordion_wrap">
                                 <span>No.</span>
@@ -148,7 +148,7 @@
                                 <button>조회</button>
                             </div>
                         </li>
-                        <li>
+                       <!-- <li>
                             <div class="accordion_wrap on">
                                 <div>000001</div>
                                 <div>초등학교</div>
@@ -166,14 +166,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </li>-->
+                     <!--   <li>
+                            <div class="accordion_wrap">
+                                <div class="noData">데이터가 없습니다</div>
+                            </div>
+                        </li>-->
                     </ul>
-                    <div class="pagination_box">
-                        <button class="first" title="첫 페이지로"></button>
-                        <button class="prev" title="이전"></button>
-                        <button class="next" title="다음"></button>
-                        <button class="last" title="마지막 페이지로"></button>
-                    </div>
+                    <div id="pagination" class="pagination_box"></div>
                 </div>
             </section>
         </div>
@@ -188,8 +188,9 @@
                 nextEl: '.fw',
                 prevEl: '.pv',
             },
-
         });
+
+
     </script>
 </body>
 </html>
