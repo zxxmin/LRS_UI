@@ -1,7 +1,11 @@
 .xApi {
     .xApiBox {
+        width: calc(100vw - (var(--gnb-width) + (var(--container-padding) * 2) + 4rem));
         height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
-        overflow-y: scroll;
+        // overflow-y: scroll;
+        > .fncArea {
+            margin-bottom: 0;
+        }
 
         .selectBox {
             position: relative;
@@ -39,6 +43,8 @@
                 border: .1rem solid $gray2;
                 border-radius: $radiusXsm;
                 padding-top: $gapXsm;
+                background-color: $white;
+                z-index: 2;
                 > li {
                     padding: $gapXsm $gapSm;
                     &:nth-child(even) {
@@ -48,8 +54,37 @@
             }
         }
 
-        .detailBtn {
-            justify-content: center;
+        // table
+        .tbl-list-area {
+            height: calc(100% - 4rem);
+            padding: $gap 0;
         }
+        .tbl-list {
+            overflow-y: scroll;
+            overflow-x: scroll;
+            height: 100%;
+
+            li {
+                background-color: $white;
+                &.thead {
+                    position: sticky;
+                    top: 0;
+                    z-index: 1;
+                }
+            }
+
+
+            .accordion_wrap {
+                >span,
+                >div {
+                    min-width: 30rem;
+                }
+
+                .detailBtn {
+                    justify-content: center;
+                }
+            }
+        }
+
     }
 }

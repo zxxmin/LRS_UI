@@ -14,7 +14,7 @@ div.CONTAINER {
     gap: $gapLg;
     grid-template-columns: auto 1fr;
 
-   nav.GNB {
+    nav.GNB {
         display: flex;
         flex-direction: column;
         width: var(--gnb-width);
@@ -172,4 +172,8 @@ div.CONTAINER {
             }
         }
     }
+
+    // .CONTENT {
+    //     min-width: 100%;
+    // }
 }
