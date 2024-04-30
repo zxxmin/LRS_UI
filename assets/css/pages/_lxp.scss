@@ -1,7 +1,18 @@
 .tbl-list-area {
   padding:3.5rem 2rem;
   background: $white;
-  border-radius:$radius ;
+  border-radius:$radius;
+
+  .listFilterBox {
+    background: $gray2;
+    margin:2rem 0;
+    width: auto;
+    .input_box {
+      & > *:not(.noFlex) {
+        flex:none;
+      }
+    }
+  }
 }
 
 .tbl-list-title {
@@ -136,12 +147,12 @@
     }
     select {
       padding-right:4rem;
-      background: url("../images/common/ico_select_bg.svg") no-repeat right 1.6rem center / 1rem 2rem;
+      background: #fff url("../images/common/ico_select_bg.svg") no-repeat right 1.6rem center / 1rem 2rem;
     }
 
     .search {
       padding-left:4rem;
-      background: url("../images/common/ico_search.svg") no-repeat left 1.6rem center / 1.5rem 1.5rem;
+      background: #fff url("../images/common/ico_search.svg") no-repeat left 1.6rem center / 1.5rem 1.5rem;
     }
   }
 }
