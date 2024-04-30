@@ -1,4 +1,7 @@
 .xApi {
+    .dayTrafficChartArea {
+        height: calc(100vh - ((var(--container-padding) * 2) + 4rem + var(--tabsNavSm-height)));
+    }
     .xApiBox {
         width: calc(100vw - (var(--gnb-width) + (var(--container-padding) * 2) + 4rem));
         height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
