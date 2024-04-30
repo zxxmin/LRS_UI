@@ -48,6 +48,7 @@
 
   > li {
     width: fit-content;
+    min-width: -webkit-fill-available;
     border-bottom: 1px solid $gray2;
 
     .accordion_wrap {
