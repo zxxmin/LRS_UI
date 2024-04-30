@@ -1,10 +1,10 @@
 .xApi {
+    .xApiBox,
     .dayTrafficChartArea {
-        height: calc(100vh - ((var(--container-padding) * 2) + 4rem + var(--tabsNavSm-height)));
+        height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
     }
     .xApiBox {
         width: calc(100vw - (var(--gnb-width) + (var(--container-padding) * 2) + 4rem));
-        height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
         position: relative;
         > .fncArea {
             margin-bottom: 0;
@@ -76,6 +76,16 @@
 
                         .detailBtn {
                             justify-content: center;
+                        }
+                    }
+                    .accordion_content {
+                        // width: calc(100vw - (var(--gnb-width) + (var(--container-padding) * 2) + 4rem + 4.8rem + 2.4rem));
+                        width: auto;
+
+                        div {
+                            pre {
+                                white-space: pre-wrap;
+                            }
                         }
                     }
                 }
