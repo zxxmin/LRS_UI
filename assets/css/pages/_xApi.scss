@@ -2,7 +2,7 @@
     .xApiBox {
         width: calc(100vw - (var(--gnb-width) + (var(--container-padding) * 2) + 4rem));
         height: calc(100vh - ((var(--container-padding) * 2) + var(--sectionTit-height) + var(--tabsNavSm-height)));
-        // overflow-y: scroll;
+        position: relative;
         > .fncArea {
             margin-bottom: 0;
         }
@@ -54,37 +54,41 @@
             }
         }
 
-        // table
+        //table
         .tbl-list-area {
             height: calc(100% - 4rem);
-            padding: $gap 0;
-        }
-        .tbl-list {
-            overflow-y: scroll;
-            overflow-x: scroll;
-            height: 100%;
+            padding: 0;
+            .tbl-list {
+                height: 100%;
+                overflow-y: scroll;
+                overflow-x: scroll;
+                li {
+                    background-color: $white;
+                    &.thead {
+                        position: sticky;
+                        top: 0;
+                        z-index: 1;
+                    }
+                    .accordion_wrap {
 
-            li {
-                background-color: $white;
-                &.thead {
-                    position: sticky;
-                    top: 0;
-                    z-index: 1;
+                        .detailBtn {
+                            justify-content: center;
+                        }
+                    }
                 }
             }
+        }
 
+    }
 
+    &.statements {
+        .tbl-list-area {
             .accordion_wrap {
-                >span,
-                >div {
-                    min-width: 30rem;
-                }
-
-                .detailBtn {
-                    justify-content: center;
+                > button,
+                > div {
+                    min-width: 24rem;
                 }
             }
         }
-
     }
 }
