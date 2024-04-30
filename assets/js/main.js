@@ -98,15 +98,16 @@ function sortList(columnIndex, isAscending) {
 }
 
 class PaginationAndList {
-    constructor(paginationElementId, buttonsPerPage, listElementId) {
+    constructor(paginationElementId, buttonsPerPage, listElementId, renderItem) {
         this.paginationElementId = paginationElementId;
         this.buttonsPerPage = buttonsPerPage;
         this.listElementId = listElementId;
+        this.renderItem = renderItem;
         this.currentPage = 1;
     }
 
-    async fetchData(page) {
-        const response = await fetch(`/example.com/data?page=${page}`);
+    async fetchData(page, url) {
+        const response = await fetch(`${url}?page=${page}`);
         console.log(response, '서버 예시 테스트')
 
         const data = {
@@ -123,14 +124,15 @@ class PaginationAndList {
                     title: 'ㄷ빗방울의 지구 여행',
                     viewCount: '1,847'
                 },
+
             ]
         };
 
         this.generatePagination(data.totalPages, page); // 페이지네이션 그리기
-        this.updateList(data.list); // 리스트 그리기
+        this.updateList(data.list, this.renderItem); // this.renderItem 전달
     }
 
-    updateList(list) {
+    updateList(list, renderItem) {
         const listElement = document.querySelector(this.listElementId);
         let child = listElement.lastElementChild;
         while (child && child !== listElement.firstElementChild) {
@@ -152,26 +154,7 @@ class PaginationAndList {
 
         // 데이터가 있는 경우
         list.forEach(item => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-            <div class="accordion_wrap on">
-                <div>${item.no}</div>
-                <div>${item.schoolLevel}</div>
-                <div>${item.grade}</div>
-                <div>${item.subject}</div>
-                <div>${item.subject}</div>
-                <div>${item.area}</div>
-                <div>${item.standardCode}</div>
-                <div class="width_auto">${item.standardDetail}</div>
-                <div>${item.title}</div>
-                <div>
-                    <div class="bar">
-                        <div class="current" style="width: 70%"></div>
-                        <span class="count">${item.viewCount}</span>
-                    </div>
-                </div>
-            </div>
-        `;
+            const li = renderItem(item);
             listElement.appendChild(li);
         });
     }
@@ -225,14 +208,15 @@ class PaginationAndList {
     }
 
 
-    init() {
+    init(url) { // url 매개변수 추가
         const paginationElement = document.querySelector(this.paginationElementId);
         const listElement = document.querySelector(this.listElementId);
         if (paginationElement && listElement) {
-            this.fetchData(this.currentPage);
+            this.fetchData(this.currentPage, url);
         }
     }
 }
 
+/*
 const pagination = new PaginationAndList('#pagination', 5, '#tblList');
-pagination.init();
+pagination.init('/example.com/data');*/

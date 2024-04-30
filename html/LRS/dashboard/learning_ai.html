@@ -190,6 +190,36 @@
             },
         });
 
+        document.addEventListener('DOMContentLoaded', function() {
+
+            function renderItem(item) {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="accordion_wrap on">
+                        <div>${item.no}</div>
+                        <div>${item.schoolLevel}</div>
+                        <div>${item.grade}</div>
+                        <div>${item.subject}</div>
+                        <div>${item.subject}</div>
+                        <div>${item.area}</div>
+                        <div>${item.standardCode}</div>
+                        <div class="width_auto">${item.standardDetail}</div>
+                        <div>${item.title}</div>
+                        <div>
+                            <div class="bar">
+                                <div class="current" style="width: 70%"></div>
+                                <span class="count">${item.viewCount}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return li;
+            }
+
+            const pagination = new PaginationAndList('#pagination', 5, '#tblList', renderItem);
+            pagination.init('/example.com/data');
+
+        });
 
     </script>
 </body>
