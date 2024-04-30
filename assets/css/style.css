@@ -1524,11 +1524,30 @@ body.login::after {
   margin-top: 2rem;
 }
 .tbl-list > li {
+  width: fit-content;
   border-bottom: 1px solid #E2E8F0;
 }
 .tbl-list > li .accordion_wrap {
   display: flex;
   justify-content: space-between;
+}
+.tbl-list > li .accordion_wrap > button {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.tbl-list > li .accordion_wrap > button:after {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 1rem;
+  background: url("../images/common/ico_list_sort_default.svg") no-repeat center;
+}
+.tbl-list > li .accordion_wrap > button.up:after {
+  background: url("../images/common/ico_list_sort_up.svg") no-repeat center;
+}
+.tbl-list > li .accordion_wrap > button.down:after {
+  background: url("../images/common/ico_list_sort_down.svg") no-repeat center;
 }
 .tbl-list > li .accordion_wrap > * {
   flex: 0.2;
@@ -1618,8 +1637,11 @@ body.login::after {
 }
 
 .xApi .xApiBox {
+  width: calc(100vw - (var(--gnb-width) + var(--container-padding) * 2 + 4rem));
   height: calc(100vh - (var(--container-padding) * 2 + var(--sectionTit-height) + var(--tabsNavSm-height)));
-  overflow-y: scroll;
+}
+.xApi .xApiBox > .fncArea {
+  margin-bottom: 0;
 }
 .xApi .xApiBox .selectBox {
   position: relative;
@@ -1654,6 +1676,8 @@ body.login::after {
   border: 0.1rem solid #E2E8F0;
   border-radius: 0.8rem;
   padding-top: 0.8rem;
+  background-color: #ffffff;
+  z-index: 2;
 }
 .xApi .xApiBox .selectBox ul > li {
   padding: 0.8rem 1.6rem;
@@ -1661,7 +1685,28 @@ body.login::after {
 .xApi .xApiBox .selectBox ul > li:nth-child(even) {
   background-color: #F5F5F5;
 }
-.xApi .xApiBox .detailBtn {
+.xApi .xApiBox .tbl-list-area {
+  height: calc(100% - 4rem);
+  padding: 2.4rem 0;
+}
+.xApi .xApiBox .tbl-list {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  height: 100%;
+}
+.xApi .xApiBox .tbl-list li {
+  background-color: #ffffff;
+}
+.xApi .xApiBox .tbl-list li.thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.xApi .xApiBox .tbl-list .accordion_wrap > span,
+.xApi .xApiBox .tbl-list .accordion_wrap > div {
+  min-width: 30rem;
+}
+.xApi .xApiBox .tbl-list .accordion_wrap .detailBtn {
   justify-content: center;
 }
 

@@ -47,11 +47,40 @@
   margin-top: 2rem;
 
   > li {
+    width: fit-content;
     border-bottom: 1px solid $gray2;
 
     .accordion_wrap {
       display: flex;
       justify-content: space-between;
+
+      & > button {
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+
+        &:after {
+          content:'';
+          display: inline-block;
+          width: 0.8rem;
+          height: 1.0rem;
+          background: url("../images/common/ico_list_sort_default.svg") no-repeat center;
+        }
+
+        &.up {
+          &:after {
+            background: url("../images/common/ico_list_sort_up.svg") no-repeat center;
+          }
+        }
+
+        &.down {
+            &:after {
+                background: url("../images/common/ico_list_sort_down.svg") no-repeat center;
+            }
+
+        }
+
+      }
 
       & > * {
         flex: 0.2;
