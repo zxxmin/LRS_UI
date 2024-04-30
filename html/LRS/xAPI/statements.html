@@ -301,9 +301,14 @@
                                         <pre>
 {
     "id": "3a49561a-4615-44eb-9687-9431593b964f",
-    "actor": {"account": {"homePage": "https://class.cbe.go.kr/",
-    "name": "ESNTL_00000000166994@cbe.go.kr"},
-    "name": "이윤미", "objectType": "Agent"},
+    "actor": {
+        "account": {
+            "homePage": "https://class.cbe.go.kr/",
+            "name": "ESNTL_00000000166994@cbe.go.kr"
+        },
+        "name": "이윤미",
+        "objectType": "Agent"
+    },
     "verb": {
         "_id": "http://id.tincanapi.com/verb/viewed",
         "display": {
@@ -599,6 +604,9 @@
             },
 
         });
+
+        const getXApiList = new xApiList('Statements', '.xApiBox .tbl-list', '.tabsNavSm > li > div');
+        getXApiList.xApiListData();
     </script>
 </body>
 </html>
