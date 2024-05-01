@@ -52,11 +52,29 @@ window.addEventListener("DOMContentLoaded", async () => {
     const tabsNavSm = document.querySelectorAll('.tabsNavSm > li');
     if (tabsNavSm) clickListAddClass(tabsNavSm, 'isCurrent');
 
-    document.querySelector('.tbl-list').addEventListener('click', function(event) {
-        if (event.target.matches('.accordion_wrap .btn.sm')) {
+    /*document.querySelector('.tbl-list').addEventListener('click', function(event) {
+        if (event.target.matches('.accordion_wrap .showDetail')) {
             const accordionWrap = findClosestParent(event.target, 'accordion_wrap');
             if (accordionWrap) {
                 accordionWrap.classList.toggle('on');
+            }
+        }
+    }); 하나만 열리게 하는 버전 */
+
+    document.querySelector('.tbl-list').addEventListener('click', function(event) {
+        if (event.target.matches('.accordion_wrap .showDetail')) {
+            const accordionWraps = document.querySelectorAll('.accordion_wrap');
+            const clickedAccordionWrap = findClosestParent(event.target, 'accordion_wrap');
+
+            if (clickedAccordionWrap) {
+                if (clickedAccordionWrap.classList.contains('on')) {
+                    clickedAccordionWrap.classList.remove('on');
+                } else {
+                    accordionWraps.forEach((wrap) => {
+                        wrap.classList.remove('on');
+                    });
+                    clickedAccordionWrap.classList.add('on');
+                }
             }
         }
     });
@@ -422,7 +440,7 @@ class xApiList {
                     if (key === "raw data") {
                         const div = document.createElement('div');
                         div.innerHTML = `
-                            <button class="btn sm">상세보기</button>
+                            <button class="btn sm showDetail">상세보기</button>
                         `
                         tbodyDiv.append(div);
 

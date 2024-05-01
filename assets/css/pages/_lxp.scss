@@ -92,6 +92,17 @@
 
         display: flex;
         align-items: center;
+
+        &.inShowDetail {
+          flex:0.05
+        }
+
+        .showDetail:not(.btn.sm) {
+          display: inline-block;
+          width: 100%;
+          padding:1rem;
+          background:url("../images/common/btn_show_detail.svg") no-repeat center / 0.9rem 1.5rem;
+        }
       }
 
       & > *.width_auto {
@@ -149,6 +160,7 @@
 
       .accordion_wrap > * {
         flex:0.1;
+
         &.width_auto {
          flex:1;
         }
@@ -159,6 +171,11 @@
       .btn.sm {
         background: $oragne0;
       }
+
+      .showDetail:not(.btn.sm) {
+        transform: rotate(90deg);
+      }
+
     }
 
     .accordion_wrap.on + .accordion_content {

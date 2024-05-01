@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMLIE LRS</title>
+
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+    <!-- <script src="../../../assets/js/_layout.js"></script> -->
+    <script src="../../../assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="accessibility">
+        <a href="#skipToContents" title="콘텐츠를 바로 볼 수 있도록 건너뛰기합니다.">콘텐츠 바로가기</a>
+    </div>
+
+    <div class="CONTAINER">
+        <nav class="GNB pullH">
+            <h1 class="logo"><a href="#none">SMILE LRS</a></h1>
+
+            <ul class="menuList">
+                <li class="gnb-dashboard isOpen">
+                    <a href="./index.html">Dashboard</a>
+                    <ul>
+                        <li class="ico-statistics"><a href="./index.html">통계</a></li>
+                        <li class="ico-learning isCurrent"><a href="./learning_lxp.html">학습활동</a></li>
+                        <li class="ico-learner"><a href="./activity_diag.html">학습자 활동</a></li>
+                    </ul>
+                </li>
+                <li class="gnb-xapi"><a href="../xAPI/xapi.html">xAPIData</a></li>
+            </ul>
+
+            <div>
+                <div class="gsSwiperWrap">
+                    <button class="btn circle pv"><span class="txtHide">이전으로</span></button>
+                    <div class="swiper gsSwiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <img src="../../../assets/images/certi/gs_certi.png" alt="GS인증서">
+                                <span>GS인증서_SMILELRS</span>
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="../../../assets/images/certi/copyright.png" alt="저작권등록증">
+                                <span>저작권 등록증_SMILELRS</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn circle fw"><span class="txtHide">다음으로</span></button>
+                </div>
+                <button class="btn logout" onclick="window.location.href='../login/login.html'">logout</button>
+            </div>
+        </nav>
+
+        <div class="CONTENT">
+            <section>
+                <h1 class="sectionTit">
+                    Pages / Dashboard
+                    <span>학습활동 - LXP</span>
+                </h1>
+
+                <ul class="tabsNav">
+                    <li>
+                        <a href="./learning_lxp.html" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-lxp">
+                                <span>교과/과목</span>
+                                <p>LXP</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 LXP</span>
+                                    <em class="fontColorGreen">85,256</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./learning_content.html" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-archive">
+                                <span>동영상, 수업설계, 수업자료</span>
+                                <p>콘텐츠 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 콘텐츠</span>
+                                    <em class="fontColorGreen">254,564</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="isCurrent">
+                        <a href="./learning_ai.html" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-question">
+                                <span>문항</span>
+                                <p>AI 문항 아카이브</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 AI문항</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./learning_diag.html" class="linkFull"></a>
+                        <div>
+                            <div class="tabTit tab-learnmap">
+                                <span>기초학력, 형성/단원평가</span>
+                                <p>진단 평가 시스템</p>
+                            </div>
+                            <div class="fncArea">
+                                <div class="lArea dirCol">
+                                    <span>금일까지 등록된 진단 평가</span>
+                                    <em class="fontColorGreen">523,257</em>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section>
+                <div class="tbl-list-area">
+                    <div class="tbl-list-title">
+                        <h3>AI DT 테스트</h3>
+                        <strong>254,564개<span> 조회 됨</span></strong>
+                    </div>
+                    <ul id="tblList" class="tbl-list">
+                        <li class="thead">
+                            <div class="accordion_wrap">
+                                <span class="inShowDetail"></span>
+                                <span>No.</span>
+                                <button>ID</button>
+                                <button>Actor</button>
+                                <button>Verb</button>
+                                <button class="width_auto">Object</button>
+                                <button>Stored</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000001</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000002</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000003</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000004</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000005</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000006</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000007</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000008</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000009</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordion_wrap">
+                                <div class="detailBtn inShowDetail">
+                                    <button title="상세보기" class="showDetail"></button>
+                                </div>
+                                <div>000010</div>
+                                <div>ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93</div>
+                                <div>http://example.com/aidt-platform,</div>
+                                <div>http://aidtbook.kr/xapi/profiles/media/verbs/played,</div>
+                                <div class="width_auto">http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,</div>
+                                <div>2024-04-30T11:21:15.139Z</div>
+                            </div>
+                            <div class="accordion_content">
+                                <div>
+                                        <pre>
+                                            {
+  "_id": {
+    "$oid": "6630d42ba299e70d27bde09b"
+  },
+  "id": "ed3c59a4-0eed-4d88-a66b-69b8a3cdbe93",
+  "actor": {
+    "account": {
+      "homePage": http://example.com/aidt-platform,
+      "name": "550e8400-e29b-41d4-a716-446655440000"
+    },
+    "objectType": "Agent"
+  },
+  "verb": {
+    "_id": http://aidtbook.kr/xapi/profiles/media/verbs/played,
+    "display": {
+      "en-US": "played"
+    }
+  },
+  "object": {
+    "_id": http://example.com/240408-media-550e8400-e29b-41d4-a716-446655440000,
+    "definition": {
+      "description": {
+        "ko-KR": "미디어"
+      },
+      "extensions": {
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/audio-info: [
+          {
+            "id": http://example.com/audio_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ],
+        http://aidtbook.kr/xapi/profiles/media/objects/extensions/video-info: [
+          {
+            "id": http://example.com/video_id_01,
+            "length": 3000,
+            "difficulty": 3,
+            "difficulty-min": 1,
+            "difficulty-max": 5,
+            "curriculum-standard-id": [
+              "E4ENGA01B01C01",
+              "E4ENGA01B01C02"
+            ],
+            "common": "true"
+          }
+        ]
+      },
+      "name": {
+        "ko-KR": "학생이 재생한 모든 미디어"
+      },
+      "type": http://aidtbook.kr/xapi/activity-type/media
+    },
+    "objectType": "Activity"
+  },
+  "result": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/audio-detail: [
+        {
+          "id": http://example.com/audio_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ],
+      http://aidtbook.kr/xapi/profiles/media/results/extensions/video-detail: [
+        {
+          "id": http://example.com/video_id_01,
+          "aitutor-recommended": "true",
+          "duration": 2839,
+          "completion": "true",
+          "attempt": 1,
+          "mute-cnt": 5,
+          "skip-cnt": 5,
+          "pause-cnt": 5
+        }
+      ]
+    }
+  },
+  "context": {
+    "extensions": {
+      http://aidtbook.kr/xapi/profiles/media/contexts/extensions/site-id: "230d3200-c23g-56l2-a543-235555890032"
+    },
+    "platform": "A개발사 디지털교과서"
+  },
+  "timestamp": {
+    "$date": "2024-04-08T06:00:00.000Z"
+  },
+  "stored": {
+    "$date": "2024-04-30T11:21:15.139Z"
+  },
+  "authority": {
+    "mbox": mailto:manager@admin.co.kr,
+    "name": "lrs",
+    "objectType": "Agent"
+  }
+}
+                                        </pre>
+                                </div>
+                            </div>
+                        </li>
+                     <!--   <li>
+                            <div class="accordion_wrap">
+                                <div class="noData">데이터가 없습니다</div>
+                            </div>
+                        </li>-->
+                    </ul>
+<!--                    <div id="pagination" class="pagination_box"></div>-->
+                    <div id="pagination" class="pagination_box"><button class="first" title="첫 페이지로"></button><button class="prev" title="이전"></button><ul class="pagination"><li><button class="on" title="1">1</button></li><li><button class="" title="2">2</button></li><li><button class="" title="3">3</button></li><li><button class="" title="4">4</button></li><li><button class="" title="5">5</button></li></ul><button class="next" title="다음"></button><button class="last" title="마지막 페이지로"></button></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const swiper = new Swiper('.gsSwiper', {
+            loop: true,
+            slidesPerView: 1,
+
+            navigation: {
+                nextEl: '.fw',
+                prevEl: '.pv',
+            },
+        });
+
+       /* document.addEventListener('DOMContentLoaded', function() {
+
+            function renderItem(item) {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="accordion_wrap on">
+                        <div>${item.no}</div>
+                        <div>${item.schoolLevel}</div>
+                        <div>${item.grade}</div>
+                        <div>${item.subject}</div>
+                        <div>${item.subject}</div>
+                        <div>${item.area}</div>
+                        <div>${item.standardCode}</div>
+                        <div class="width_auto">${item.standardDetail}</div>
+                        <div>${item.title}</div>
+                        <div>
+                            <div class="bar">
+                                <div class="current" style="width: 70%"></div>
+                                <span class="count">${item.viewCount}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return li;
+            }
+
+            const pagination = new PaginationAndList('#pagination', 5, '#tblList', renderItem);
+            pagination.init('/example.com/data');
+
+        });*/
+
+    </script>
+</body>
+</html>
