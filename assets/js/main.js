@@ -61,23 +61,27 @@ window.addEventListener("DOMContentLoaded", async () => {
         }
     }); 하나만 열리게 하는 버전 */
 
-    document.querySelector('.tbl-list').addEventListener('click', function(event) {
-        if (event.target.matches('.accordion_wrap .showDetail')) {
-            const accordionWraps = document.querySelectorAll('.accordion_wrap');
-            const clickedAccordionWrap = findClosestParent(event.target, 'accordion_wrap');
+    const tblList = document.querySelector('.tbl-list');
 
-            if (clickedAccordionWrap) {
-                if (clickedAccordionWrap.classList.contains('on')) {
-                    clickedAccordionWrap.classList.remove('on');
-                } else {
-                    accordionWraps.forEach((wrap) => {
-                        wrap.classList.remove('on');
-                    });
-                    clickedAccordionWrap.classList.add('on');
+    if (tblList) {
+        tblList.addEventListener('click', function(event) {
+            if (event.target.matches('.accordion_wrap .showDetail')) {
+                const accordionWraps = document.querySelectorAll('.accordion_wrap');
+                const clickedAccordionWrap = findClosestParent(event.target, 'accordion_wrap');
+
+                if (clickedAccordionWrap) {
+                    if (clickedAccordionWrap.classList.contains('on')) {
+                        clickedAccordionWrap.classList.remove('on');
+                    } else {
+                        accordionWraps.forEach((wrap) => {
+                            wrap.classList.remove('on');
+                        });
+                        clickedAccordionWrap.classList.add('on');
+                    }
                 }
             }
-        }
-    });
+        });
+    }
 })
 
 // tblList 버튼 클릭 이벤트
