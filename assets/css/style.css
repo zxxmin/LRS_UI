@@ -640,11 +640,13 @@ table caption {
 }
 
 .tabsNav li {
+  width: 22.5%;
   font-size: 1.2rem;
   font-weight: 400;
   color: #004DB0;
 }
 .tabsNav li.notFlex {
+  width: 10%;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -656,7 +658,6 @@ table caption {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 8.8rem;
 }
 .tabsNav li.notFlex .tabTit p {
   color: #ffffff;
@@ -686,6 +687,9 @@ table caption {
 .tabsNav li > div .fncArea .checkRadio {
   z-index: 1;
   position: relative;
+}
+.tabsNav li > div .tabTit {
+  padding-right: 6rem;
 }
 .tabsNav li.isCurrent:not(.notFlex) {
   background-color: #ffffff;
@@ -1735,6 +1739,17 @@ body.login::after {
       -ms-flex-align: center;
           align-items: center;
 }
+.tbl-list > li .accordion_wrap > *.inShowDetail {
+  -webkit-box-flex: 0.02;
+      -ms-flex: 0.02;
+          flex: 0.02;
+}
+.tbl-list > li .accordion_wrap > * .showDetail:not(.btn.sm) {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  background: url("../images/common/btn_show_detail.svg") no-repeat center/0.9rem 1.5rem;
+}
 .tbl-list > li .accordion_wrap > *.width_auto {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -1799,6 +1814,10 @@ body.login::after {
 }
 .tbl-list > li .accordion_wrap.on .btn.sm {
   background: #ED8936;
+}
+.tbl-list > li .accordion_wrap.on .showDetail:not(.btn.sm) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .tbl-list > li .accordion_wrap.on + .accordion_content {
   display: block;
