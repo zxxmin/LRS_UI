@@ -240,15 +240,15 @@ const pagination = new PaginationAndList('#pagination', 5, '#tblList');
 pagination.init('/example.com/data');*/
 
 class xApiList {
-    constructor(key, renderTarget, tabNavData,) {
+    constructor(key, renderTarget, tabNavTarget) {
         this.key = key;
         this.renderTarget = renderTarget;
-        this.tabNavData = tabNavData;
+        this.tabNavTarget = tabNavTarget;
     }
 
-    xApiListData() {
+    xApiListData(key) {
         let result;
-        switch(this.key) {
+        switch(key) {
             case "Statements" :
                 result = [
                     {
@@ -401,8 +401,15 @@ class xApiList {
                 break;
         }
 
+        return result;
+    }
+
+    fetchData() {
+        const data = this.xApiListData(this.key)
+
         // this.key === "Statements" ? console.log('here') : this.updateList(result);
-        this.updateList(result);
+        this.updateList(data);
+        this.tabNavVal();
     }
 
     updateList(data) {
@@ -420,7 +427,6 @@ class xApiList {
             return;
         }
         
-        // this.tabNavVal(data);
         this.renderList(wrap, data);
     }
 
@@ -516,5 +522,24 @@ class xApiList {
         
         theadLi.append(theadDiv);
         wrap.prepend(theadLi);
+    }
+
+    tabNavVal() {
+        const tabs = [{
+            "Statements" : this.xApiListData("Statements").length,
+            "Agents" : this.xApiListData("Agents").length,
+            "Activities" : this.xApiListData("Activities").length,
+            "Verbs" : this.xApiListData("Verbs").length,
+        }]
+
+        const wrap = document.querySelectorAll(this.tabNavTarget);
+        // wrap.innerHTML = '';
+
+        wrap.forEach((li, idx) => {
+            li.innerHTML = `
+                <p>${Object.keys(tabs[0])[idx]}</p>
+                <span>data ${Object.values(tabs[0])[idx]}</span>
+            `
+        })
     }
 }

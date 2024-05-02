@@ -27,7 +27,7 @@
                     <a href="./index.html">Dashboard</a>
                     <ul>
                         <li class="ico-statistics"><a href="./index.html">통계</a></li>
-                        <li class="ico-learning isCurrent"><a href="./learning_lxp.html">학습활동</a></li>
+                        <li class="ico-learning isCurrent"><a href="./learning_AIDT.html">학습활동</a></li>
                         <li class="ico-learner"><a href="./activity_diag.html">학습자 활동</a></li>
                     </ul>
                 </li>
@@ -35,21 +35,11 @@
             </ul>
 
             <div>
-                <div class="gsSwiperWrap">
-                    <button class="btn circle pv"><span class="txtHide">이전으로</span></button>
-                    <div class="swiper gsSwiper">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
-                                <img src="../../../assets/images/certi/gs_certi.png" alt="GS인증서">
-                                <span>GS인증서_SMILELRS</span>
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="../../../assets/images/certi/copyright.png" alt="저작권등록증">
-                                <span>저작권 등록증_SMILELRS</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="btn circle fw"><span class="txtHide">다음으로</span></button>
+                <div class="certiWrap">
+                    <ul>
+                        <li><img src="../../../assets/images/certi/good.png" alt="1등급 인증마크"></li>
+                        <li><img src="../../../assets/images/certi/ADL_LOGO.png" alt="ADL 로고"></li>
+                    </ul>
                 </div>
                 <button class="btn logout" onclick="window.location.href='../login/login.html'">logout</button>
             </div>
@@ -63,6 +53,15 @@
                 </h1>
 
                 <ul class="tabsNav">
+                    <li class="notFlex">
+                        <a href="./learning_AIDT.html" class="linkFull"></a>
+                        <div class="tabTit">
+                            <p>
+                                AI DT<br>
+                                테스트
+                            </p>
+                        </div>
+                    </li>
                     <li>
                         <a href="./learning_lxp.html" class="linkFull"></a>
                         <div>
@@ -137,26 +136,28 @@
                         <li class="thead">
                             <div class="accordion_wrap">
                                 <span>No.</span>
-                                <button>문항 ID</button>
                                 <button>학교급</button>
                                 <button>학년</button>
                                 <button>교과</button>
                                 <button>과목</button>
                                 <button>영역(단원)</button>
-                                <button class="width_auto">성취기준 코드</button>
+                                <button>성취기준 코드</button>
+                                <button class="width_auto">성취기준 별</button>
+                                <button>문항 ID</button>
                                 <button>조회</button>
                             </div>
                         </li>
-                        <li>
-                            <div class="accordion_wrap">
+                       <!-- <li>
+                            <div class="accordion_wrap on">
                                 <div>000001</div>
-                                <div>2335468</div>
                                 <div>초등학교</div>
                                 <div>3~4학년</div>
                                 <div>과학</div>
                                 <div>과학</div>
                                 <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02][4과17-02][4과17-02][4과17-02][4과17-02][4과17-02][4과17-02][4과17-02]</div>
+                                <div>[4과17-02]</div>
+                                <div class="width_auto">물의 중요성을 알고 물 부족 현상을 해결하기 위해 창의적 방법을 활용한 사례를 조사할 수 있다.</div>
+                                <div>2335468</div>
                                 <div>
                                     <div class="bar">
                                         <div class="current" style="width: 70%"></div>
@@ -164,169 +165,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000002</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000003</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000004</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000005</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000006</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000007</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000008</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000009</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="accordion_wrap">
-                                <div>000010</div>
-                                <div>2335468</div>
-                                <div>초등학교</div>
-                                <div>3~4학년</div>
-                                <div>과학</div>
-                                <div>과학</div>
-                                <div>물의 여행</div>
-                                <div class="width_auto">[4과17-02]</div>
-                                <div>
-                                    <div class="bar">
-                                        <div class="current" style="width: 70%"></div>
-                                        <span class="count">4,847</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        </li>-->
                      <!--   <li>
                             <div class="accordion_wrap">
                                 <div class="noData">데이터가 없습니다</div>
@@ -341,17 +180,7 @@
     </div>
 
     <script>
-        const swiper = new Swiper('.gsSwiper', {
-            loop: true,
-            slidesPerView: 1,
-
-            navigation: {
-                nextEl: '.fw',
-                prevEl: '.pv',
-            },
-        });
-
-      /*  document.addEventListener('DOMContentLoaded', function() {
+        /*  document.addEventListener('DOMContentLoaded', function() {
 
             function renderItem(item) {
                 const li = document.createElement('li');

@@ -117,59 +117,80 @@ div.CONTAINER {
         > div {
             margin-top: auto;
 
-            .gsSwiperWrap {
-                display: flex;
-                flex-direction: row;
-                gap: $gapXxsm;
-                align-items: center;
+            .certiWrap {
                 margin-bottom: $gapLg;
 
-                button {
-                    z-index: 2;
-                    &::after {
-                        content: '';
-                        width: .8rem;
-                        height: .8rem;
-                        border-left: .2rem solid $black;
-                        border-bottom: .2rem solid $black;
-                        transform: rotate(45deg);
-                        display: block;
-                    }
-                    &.fw{
-                        &::after {
-                            transform: rotate(-135deg);
-                        }
-
-                    }
-
-                    &.pv {
-                        left: -1rem;
-                    }
-                }
-            }
-
-            .gsSwiper {
-                position: relative;
-                flex: 1;
-                min-width: 0;
-
                 ul {
-                    background-color: $gray1;
-                    border-radius: $radiusXsm;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: $gapSm;
+
                     li {
-                        position: relative;
+                        width: 50%;
                         img {
                             display: block;
                             width: 100%;
                         }
-                        span {
-                            display: block;
-                            text-align: center;
-                            font-weight: 700;
-                        }
                     }
                 }
             }
+
+            // .gsSwiperWrap {
+            //     display: flex;
+            //     flex-direction: row;
+            //     gap: $gapXxsm;
+            //     align-items: center;
+            //     margin-bottom: $gapLg;
+
+            //     button {
+            //         z-index: 2;
+            //         &::after {
+            //             content: '';
+            //             width: .8rem;
+            //             height: .8rem;
+            //             border-left: .2rem solid $black;
+            //             border-bottom: .2rem solid $black;
+            //             transform: rotate(45deg);
+            //             display: block;
+            //         }
+            //         &.fw{
+            //             &::after {
+            //                 transform: rotate(-135deg);
+            //             }
+
+            //         }
+
+            //         &.pv {
+            //             left: -1rem;
+            //         }
+            //     }
+            // }
+
+            // .gsSwiper {
+            //     position: relative;
+            //     flex: 1;
+            //     min-width: 0;
+
+            //     ul {
+            //         background-color: $gray1;
+            //         border-radius: $radiusXsm;
+            //         li {
+            //             position: relative;
+            //             img {
+            //                 display: block;
+            //                 width: 100%;
+            //             }
+            //             span {
+            //                 display: block;
+            //                 text-align: center;
+            //                 font-weight: 700;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
 

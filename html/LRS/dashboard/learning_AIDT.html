@@ -27,7 +27,7 @@
                     <a href="./index.html">Dashboard</a>
                     <ul>
                         <li class="ico-statistics"><a href="./index.html">통계</a></li>
-                        <li class="ico-learning isCurrent"><a href="./learning_lxp.html">학습활동</a></li>
+                        <li class="ico-learning isCurrent"><a href="./learning_AIDT.html">학습활동</a></li>
                         <li class="ico-learner"><a href="./activity_diag.html">학습자 활동</a></li>
                     </ul>
                 </li>
@@ -35,21 +35,11 @@
             </ul>
 
             <div>
-                <div class="gsSwiperWrap">
-                    <button class="btn circle pv"><span class="txtHide">이전으로</span></button>
-                    <div class="swiper gsSwiper">
-                        <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
-                                <img src="../../../assets/images/certi/gs_certi.png" alt="GS인증서">
-                                <span>GS인증서_SMILELRS</span>
-                            </li>
-                            <li class="swiper-slide">
-                                <img src="../../../assets/images/certi/copyright.png" alt="저작권등록증">
-                                <span>저작권 등록증_SMILELRS</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="btn circle fw"><span class="txtHide">다음으로</span></button>
+                <div class="certiWrap">
+                    <ul>
+                        <li><img src="../../../assets/images/certi/good.png" alt="1등급 인증마크"></li>
+                        <li><img src="../../../assets/images/certi/ADL_LOGO.png" alt="ADL 로고"></li>
+                    </ul>
                 </div>
                 <button class="btn logout" onclick="window.location.href='../login/login.html'">logout</button>
             </div>
@@ -63,6 +53,15 @@
                 </h1>
 
                 <ul class="tabsNav">
+                    <li class="notFlex isCurrent">
+                        <a href="./learning_AIDT.html" class="linkFull"></a>
+                        <div class="tabTit">
+                            <p>
+                                AI DT<br>
+                                테스트
+                            </p>
+                        </div>
+                    </li>
                     <li>
                         <a href="./learning_lxp.html" class="linkFull"></a>
                         <div>
@@ -93,7 +92,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="isCurrent">
+                    <li>
                         <a href="./learning_ai.html" class="linkFull"></a>
                         <div>
                             <div class="tabTit tab-question">
@@ -1419,16 +1418,6 @@
     </div>
 
     <script>
-        const swiper = new Swiper('.gsSwiper', {
-            loop: true,
-            slidesPerView: 1,
-
-            navigation: {
-                nextEl: '.fw',
-                prevEl: '.pv',
-            },
-        });
-
        /* document.addEventListener('DOMContentLoaded', function() {
 
             function renderItem(item) {
